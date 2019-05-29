@@ -12,6 +12,15 @@
 		EF369EED229EDF1400B6E21A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF369EEC229EDF1400B6E21A /* Assets.xcassets */; };
 		EF369EF0229EDF1400B6E21A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF369EEE229EDF1400B6E21A /* LaunchScreen.storyboard */; };
 		EF369EF8229EE3BD00B6E21A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF369EF7229EE3BD00B6E21A /* LoginViewController.swift */; };
+		EF369EFB229F1A3700B6E21A /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF369EFA229F1A3700B6E21A /* RoundView.swift */; };
+		EF369EFD229F1EEB00B6E21A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF369EFC229F1EEB00B6E21A /* MenuViewController.swift */; };
+		EF369EFF229F283400B6E21A /* PesquisarLocal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF369EFE229F283400B6E21A /* PesquisarLocal.storyboard */; };
+		EF369F02229F28AB00B6E21A /* SelecionarDesportoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF369F01229F28AB00B6E21A /* SelecionarDesportoViewController.swift */; };
+		EF369F05229F312B00B6E21A /* AdicionarLocal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF369F04229F312B00B6E21A /* AdicionarLocal.storyboard */; };
+		EF369F09229F322100B6E21A /* Favoritos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF369F08229F322100B6E21A /* Favoritos.storyboard */; };
+		EF369F0C229F32CD00B6E21A /* Historico.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF369F0B229F32CD00B6E21A /* Historico.storyboard */; };
+		EF369F10229F361500B6E21A /* Ranking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF369F0F229F361500B6E21A /* Ranking.storyboard */; };
+		EF369F13229F36A000B6E21A /* Conta.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF369F12229F36A000B6E21A /* Conta.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		EF369EEF229EDF1400B6E21A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF369EF1229EDF1400B6E21A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF369EF7229EE3BD00B6E21A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EF369EFA229F1A3700B6E21A /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		EF369EFC229F1EEB00B6E21A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		EF369EFE229F283400B6E21A /* PesquisarLocal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PesquisarLocal.storyboard; sourceTree = "<group>"; };
+		EF369F01229F28AB00B6E21A /* SelecionarDesportoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecionarDesportoViewController.swift; sourceTree = "<group>"; };
+		EF369F04229F312B00B6E21A /* AdicionarLocal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdicionarLocal.storyboard; sourceTree = "<group>"; };
+		EF369F08229F322100B6E21A /* Favoritos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favoritos.storyboard; sourceTree = "<group>"; };
+		EF369F0B229F32CD00B6E21A /* Historico.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Historico.storyboard; sourceTree = "<group>"; };
+		EF369F0F229F361500B6E21A /* Ranking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ranking.storyboard; sourceTree = "<group>"; };
+		EF369F12229F36A000B6E21A /* Conta.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Conta.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +72,87 @@
 		EF369EE4229EDF1300B6E21A /* Sportfinder */ = {
 			isa = PBXGroup;
 			children = (
+				EF369EF9229F1A1500B6E21A /* CustomClass */,
 				EF369EE5229EDF1300B6E21A /* AppDelegate.swift */,
-				EF369EF7229EE3BD00B6E21A /* LoginViewController.swift */,
-				EF369EE9229EDF1300B6E21A /* Main.storyboard */,
-				EF369EEC229EDF1400B6E21A /* Assets.xcassets */,
 				EF369EEE229EDF1400B6E21A /* LaunchScreen.storyboard */,
 				EF369EF1229EDF1400B6E21A /* Info.plist */,
+				EF369EEC229EDF1400B6E21A /* Assets.xcassets */,
+				EF369EE9229EDF1300B6E21A /* Main.storyboard */,
+				EF369F0D229F34E100B6E21A /* MainStoryboardControllers */,
+				EF369F00229F288500B6E21A /* PesquisarLocal */,
+				EF369F03229F310200B6E21A /* AdicionarLocal */,
+				EF369F07229F320F00B6E21A /* Favoritos */,
+				EF369F0A229F32B900B6E21A /* Historico */,
+				EF369F0E229F355300B6E21A /* Ranking */,
+				EF369F11229F368C00B6E21A /* Conta */,
 			);
 			path = Sportfinder;
+			sourceTree = "<group>";
+		};
+		EF369EF9229F1A1500B6E21A /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				EF369EFA229F1A3700B6E21A /* RoundView.swift */,
+			);
+			path = CustomClass;
+			sourceTree = "<group>";
+		};
+		EF369F00229F288500B6E21A /* PesquisarLocal */ = {
+			isa = PBXGroup;
+			children = (
+				EF369EFE229F283400B6E21A /* PesquisarLocal.storyboard */,
+				EF369F01229F28AB00B6E21A /* SelecionarDesportoViewController.swift */,
+			);
+			name = PesquisarLocal;
+			sourceTree = "<group>";
+		};
+		EF369F03229F310200B6E21A /* AdicionarLocal */ = {
+			isa = PBXGroup;
+			children = (
+				EF369F04229F312B00B6E21A /* AdicionarLocal.storyboard */,
+			);
+			name = AdicionarLocal;
+			sourceTree = "<group>";
+		};
+		EF369F07229F320F00B6E21A /* Favoritos */ = {
+			isa = PBXGroup;
+			children = (
+				EF369F08229F322100B6E21A /* Favoritos.storyboard */,
+			);
+			name = Favoritos;
+			sourceTree = "<group>";
+		};
+		EF369F0A229F32B900B6E21A /* Historico */ = {
+			isa = PBXGroup;
+			children = (
+				EF369F0B229F32CD00B6E21A /* Historico.storyboard */,
+			);
+			name = Historico;
+			sourceTree = "<group>";
+		};
+		EF369F0D229F34E100B6E21A /* MainStoryboardControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF369EF7229EE3BD00B6E21A /* LoginViewController.swift */,
+				EF369EFC229F1EEB00B6E21A /* MenuViewController.swift */,
+			);
+			name = MainStoryboardControllers;
+			sourceTree = "<group>";
+		};
+		EF369F0E229F355300B6E21A /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				EF369F0F229F361500B6E21A /* Ranking.storyboard */,
+			);
+			name = Ranking;
+			sourceTree = "<group>";
+		};
+		EF369F11229F368C00B6E21A /* Conta */ = {
+			isa = PBXGroup;
+			children = (
+				EF369F12229F36A000B6E21A /* Conta.storyboard */,
+			);
+			name = Conta;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +213,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF369EFF229F283400B6E21A /* PesquisarLocal.storyboard in Resources */,
+				EF369F05229F312B00B6E21A /* AdicionarLocal.storyboard in Resources */,
 				EF369EF0229EDF1400B6E21A /* LaunchScreen.storyboard in Resources */,
+				EF369F13229F36A000B6E21A /* Conta.storyboard in Resources */,
+				EF369F10229F361500B6E21A /* Ranking.storyboard in Resources */,
 				EF369EED229EDF1400B6E21A /* Assets.xcassets in Resources */,
+				EF369F09229F322100B6E21A /* Favoritos.storyboard in Resources */,
 				EF369EEB229EDF1300B6E21A /* Main.storyboard in Resources */,
+				EF369F0C229F32CD00B6E21A /* Historico.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +232,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF369EFB229F1A3700B6E21A /* RoundView.swift in Sources */,
+				EF369F02229F28AB00B6E21A /* SelecionarDesportoViewController.swift in Sources */,
 				EF369EF8229EE3BD00B6E21A /* LoginViewController.swift in Sources */,
 				EF369EE6229EDF1300B6E21A /* AppDelegate.swift in Sources */,
+				EF369EFD229F1EEB00B6E21A /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +383,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 934F7L3HCM;
 				INFOPLIST_FILE = Sportfinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +401,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 934F7L3HCM;
 				INFOPLIST_FILE = Sportfinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
