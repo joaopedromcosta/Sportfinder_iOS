@@ -14,7 +14,7 @@
         <scene sceneID="cgA-2v-WZS">
             <objects>
                 <viewController id="56Y-gU-9CZ" customClass="LoginViewController" customModule="Sportfinder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lgo-A5-xw4">
+                    <view key="view" contentMode="scaleToFill" id="lgo-A5-xw4" colorLabel="IBBuiltInLabel-Green">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.36078431372549019" green="0.85882352941176465" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="XGV-V3-IQ8"/>
                     </view>
                 </viewController>
