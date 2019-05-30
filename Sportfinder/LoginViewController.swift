@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -15,6 +15,23 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func btnLogin(_ sender: Any) {
+        btnLogin()
+    }
+    
+    func btnLogin (){
+        Auth.auth().signIn(withEmail:"commov2019@gmail.com", password: "Commovido207709"){(result,error) in
+            if let error = error{
+                print("errorrrrrrkjfiuhfhuifhiufuihfrrr")
+                return
+            }
+            print("deu crlh")
+            
+            
+            
+        }
+       
+    }
     
 }
 

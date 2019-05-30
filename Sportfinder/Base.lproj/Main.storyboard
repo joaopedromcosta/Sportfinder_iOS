@@ -23,6 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
+                                    <action selector="btnLogin:" destination="56Y-gU-9CZ" eventType="touchUpInside" id="46v-Ok-w9w"/>
                                     <segue destination="LwY-Ip-IDS" kind="show" id="Gq9-FE-j2e"/>
                                 </connections>
                             </button>
