@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB7CCF5822A6B4FA005A703A /* RankingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7CCF5722A6B4FA005A703A /* RankingController.swift */; };
+		EB7CCF5A22A6D0FD005A703A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7CCF5922A6D0FD005A703A /* User.swift */; };
+		EB7CCF5E22A6D767005A703A /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7CCF5D22A6D767005A703A /* MyTableViewCell.swift */; };
 		EF369EE6229EDF1300B6E21A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF369EE5229EDF1300B6E21A /* AppDelegate.swift */; };
 		EF369EEB229EDF1300B6E21A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF369EE9229EDF1300B6E21A /* Main.storyboard */; };
 		EF369EED229EDF1400B6E21A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF369EEC229EDF1400B6E21A /* Assets.xcassets */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB7CCF5722A6B4FA005A703A /* RankingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingController.swift; sourceTree = "<group>"; };
+		EB7CCF5922A6D0FD005A703A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EB7CCF5D22A6D767005A703A /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		EF369EE2229EDF1300B6E21A /* Sportfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sportfinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF369EE5229EDF1300B6E21A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF369EEA229EDF1300B6E21A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -143,6 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				EF369F0F229F361500B6E21A /* Ranking.storyboard */,
+				EB7CCF5722A6B4FA005A703A /* RankingController.swift */,
+				EB7CCF5922A6D0FD005A703A /* User.swift */,
+				EB7CCF5D22A6D767005A703A /* MyTableViewCell.swift */,
 			);
 			name = Ranking;
 			sourceTree = "<group>";
@@ -233,10 +242,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF369EFB229F1A3700B6E21A /* RoundView.swift in Sources */,
+				EB7CCF5E22A6D767005A703A /* MyTableViewCell.swift in Sources */,
 				EF369F02229F28AB00B6E21A /* SelecionarDesportoViewController.swift in Sources */,
 				EF369EF8229EE3BD00B6E21A /* LoginViewController.swift in Sources */,
 				EF369EE6229EDF1300B6E21A /* AppDelegate.swift in Sources */,
+				EB7CCF5822A6B4FA005A703A /* RankingController.swift in Sources */,
 				EF369EFD229F1EEB00B6E21A /* MenuViewController.swift in Sources */,
+				EB7CCF5A22A6D0FD005A703A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
