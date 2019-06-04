@@ -15,20 +15,45 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //MARK: Properties
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtPassword:UITextField!
+    @IBOutlet weak var txtError: UILabel!
+    
+    //MARK: Action
     @IBAction func btnLogin(_ sender: Any) {
-        btnLogin()
+        var email: String
+        var pass: String
+        email = txtEmail.text!
+        pass = txtPassword.text!
+        btnLogin(email: email,pass: pass)
     }
     
-    func btnLogin (){
-        Auth.auth().signIn(withEmail:"commov2019@gmail.com", password: "Commovido207709"){(result,error) in
-            if let error = error{
-                print("errorrrrrrkjfiuhfhuifhiufuihfrrr")
-                return
+    func btnLogin (email:String,pass:String){
+        print(email)
+        print(pass)
+        
+        if(email.isEmpty && pass.isEmpty){
+            txtError.text = "Por favor insira as credenciais"
+            return
+        }else if(email.isEmpty){
+            txtError.text = "Insira um Email"
+            return
+        } else if(pass.isEmpty){
+            txtError.text = "Insira uma Password"
+            return
+        }else {
+            Auth.auth().signIn(withEmail:email, password: pass){(result,error) in
+                if let error = error{
+                    self.txtError.text = "Credenciais inválidas"
+                    return
+                }
+                print("deu crlh")
+                self.performSegue(withIdentifier: "menuPrincipal", sender: self)
+                
+                
+                
             }
-            print("deu crlh")
-            
-            
-            
         }
        
     }
