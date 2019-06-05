@@ -27,6 +27,8 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource 
             print("pedro: " + d.nome)
         }*/
         print(arrayDesportos.count)
+        
+        self.tvDesportos.rowHeight = 70.0
     }
     
     func getArrayDesportos(){
@@ -72,10 +74,20 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
+        /*let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
         cell.textLabel?.text = arrayDesportos[indexPath.row].nome
         cell.detailTextLabel?.text = "info"
+        return cell*/
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellDesporto", for: indexPath) as! TableViewCellDesportos
+        let ec:EntityReturnDesportos = arrayDesportos[indexPath.row] as! EntityReturnDesportos
+        cell.tvNomeDesporto.text = ec.nome
+        cell.IVIconDesporto.image = UIImage(named: "football_ball")
         return cell
+        
+        
     }
+    
+    
 }
 
