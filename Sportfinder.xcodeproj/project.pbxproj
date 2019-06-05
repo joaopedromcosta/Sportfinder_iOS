@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1E05940422A0448F00ACAD9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E05940322A0448F00ACAD9E /* GoogleService-Info.plist */; };
+		1E15FE9B22A70EE400101A9E /* EntityReturnDesportos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E15FE9A22A70EE400101A9E /* EntityReturnDesportos.swift */; };
 		C51E5F2FE0B10AB58F1BE249 /* Pods_Sportfinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681AA3C85510C95F609FE8B6 /* Pods_Sportfinder.framework */; };
 		EF369EE6229EDF1300B6E21A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF369EE5229EDF1300B6E21A /* AppDelegate.swift */; };
 		EF369EEB229EDF1300B6E21A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF369EE9229EDF1300B6E21A /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		1E05940322A0448F00ACAD9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1E15FE9A22A70EE400101A9E /* EntityReturnDesportos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityReturnDesportos.swift; sourceTree = "<group>"; };
 		2FB903156D2A27674691B110 /* Pods-Sportfinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sportfinder.release.xcconfig"; path = "Target Support Files/Pods-Sportfinder/Pods-Sportfinder.release.xcconfig"; sourceTree = "<group>"; };
 		681AA3C85510C95F609FE8B6 /* Pods_Sportfinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sportfinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF369EE2229EDF1300B6E21A /* Sportfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sportfinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +76,6 @@
 				F320DB29CF4022CA45CF2150 /* Pods-Sportfinder.debug.xcconfig */,
 				2FB903156D2A27674691B110 /* Pods-Sportfinder.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -130,6 +131,7 @@
 			children = (
 				EF369EFE229F283400B6E21A /* PesquisarLocal.storyboard */,
 				EF369F01229F28AB00B6E21A /* SelecionarDesportoViewController.swift */,
+				1E15FE9A22A70EE400101A9E /* EntityReturnDesportos.swift */,
 			);
 			name = PesquisarLocal;
 			sourceTree = "<group>";
@@ -309,6 +311,7 @@
 				EF369F02229F28AB00B6E21A /* SelecionarDesportoViewController.swift in Sources */,
 				EF369EF8229EE3BD00B6E21A /* LoginViewController.swift in Sources */,
 				EF369EE6229EDF1300B6E21A /* AppDelegate.swift in Sources */,
+				1E15FE9B22A70EE400101A9E /* EntityReturnDesportos.swift in Sources */,
 				EF369EFD229F1EEB00B6E21A /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,17 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pesquisar Local" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLG-Fv-Q0j">
-                                <rect key="frame" x="127.5" y="323" width="120" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Po0-Q8-3LD">
+                                <rect key="frame" x="0.0" y="90" width="375" height="577"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="YGo-yL-IHD" id="SgI-fk-q3k"/>
+                                    <outlet property="delegate" destination="YGo-yL-IHD" id="Fzn-8a-ebh"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eLG-Fv-Q0j" firstAttribute="centerX" secondItem="uM7-NZ-3WK" secondAttribute="centerX" id="8OW-zA-4a4"/>
-                            <constraint firstItem="eLG-Fv-Q0j" firstAttribute="centerY" secondItem="uM7-NZ-3WK" secondAttribute="centerY" id="nm3-mu-Ici"/>
+                            <constraint firstItem="WUJ-lw-5Zv" firstAttribute="trailing" secondItem="Po0-Q8-3LD" secondAttribute="trailing" id="7J2-Y2-cIJ"/>
+                            <constraint firstItem="Po0-Q8-3LD" firstAttribute="top" secondItem="WUJ-lw-5Zv" secondAttribute="top" constant="70" id="BC4-ce-f4E"/>
+                            <constraint firstItem="WUJ-lw-5Zv" firstAttribute="bottom" secondItem="Po0-Q8-3LD" secondAttribute="bottom" id="JWU-DY-mg1"/>
+                            <constraint firstItem="Po0-Q8-3LD" firstAttribute="leading" secondItem="WUJ-lw-5Zv" secondAttribute="leading" id="yOi-R7-24t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WUJ-lw-5Zv"/>
                     </view>
