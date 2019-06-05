@@ -21,9 +21,27 @@ class TableViewCellDesportos: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override var frame: CGRect {
+        get {
+            return super.frame
+        }
+        set (newFrame) {
+            var frame = newFrame
+            let newWidth = frame.width * 0.80 // get 80% width here
+            let space = (frame.width - newWidth) / 2
+            frame.size.width = newWidth
+            frame.origin.x += space
+            
+            super.frame = frame
+            
+        }
+    }
+    
     //MARK: Properties
     
     @IBOutlet weak var tvNomeDesporto: UILabel!
     @IBOutlet weak var IVIconDesporto: UIImageView!
+    
+    
     
 }

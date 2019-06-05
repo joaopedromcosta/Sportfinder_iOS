@@ -9,7 +9,7 @@
 
 import UIKit
 
-class SelecionarDesportoViewController: UIViewController, UITableViewDataSource {
+class SelecionarDesportoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegateFlowLayout {
     
     //MARK:outlet
     @IBOutlet var tvDesportos: UITableView!
@@ -27,6 +27,8 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource 
             print("pedro: " + d.nome)
         }*/
         print(arrayDesportos.count)
+        
+        self.tvDesportos.backgroundColor = UIColor.red
         
         self.tvDesportos.rowHeight = 70.0
     }
@@ -83,11 +85,23 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource 
         let ec:EntityReturnDesportos = arrayDesportos[indexPath.row] as! EntityReturnDesportos
         cell.tvNomeDesporto.text = ec.nome
         cell.IVIconDesporto.image = UIImage(named: "football_ball")
+        
+        cell.backgroundColor = UIColor.white
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 0.5
+        cell.layer.cornerRadius = 30
+        cell.clipsToBounds = true
+        
+        
         return cell
-        
-        
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 20
+    }
 }
 
