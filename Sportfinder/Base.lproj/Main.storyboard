@@ -432,7 +432,7 @@
                 <viewControllerPlaceholder storyboardName="PesquisarLocal" referencedIdentifier="pesquisarLocalStoryBoard" id="tZg-C5-upg" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vqs-bR-Cso" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2594" y="-114"/>
+            <point key="canvasLocation" x="2822" y="-58"/>
         </scene>
         <!--adicionarLocalStoryBoard-->
         <scene sceneID="xKf-qk-OXR">
@@ -440,7 +440,7 @@
                 <viewControllerPlaceholder storyboardName="AdicionarLocal" referencedIdentifier="adicionarLocalStoryBoard" id="4Gw-h4-Seg" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggh-gh-wM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2631" y="-49"/>
+            <point key="canvasLocation" x="2818" y="-6"/>
         </scene>
         <!--favoritosStoryBoard-->
         <scene sceneID="qiU-PS-dKr">
@@ -448,7 +448,7 @@
                 <viewControllerPlaceholder storyboardName="Favoritos" referencedIdentifier="favoritosStoryBoard" id="elk-7I-cW5" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Axk-72-bwz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2703" y="97"/>
+            <point key="canvasLocation" x="2673" y="89"/>
         </scene>
         <!--historicoStoryBoard-->
         <scene sceneID="dFX-Yf-s5k">
@@ -456,7 +456,7 @@
                 <viewControllerPlaceholder storyboardName="Historico" referencedIdentifier="historicoStoryBoard" id="4mJ-Df-lQz" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5OI-Kl-INO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2669" y="151"/>
+            <point key="canvasLocation" x="2653" y="136"/>
         </scene>
         <!--rankingStoryBoard-->
         <scene sceneID="wXc-h0-5Fj">
@@ -464,7 +464,7 @@
                 <viewControllerPlaceholder storyboardName="Ranking" referencedIdentifier="rankingStoryBoard" id="uFS-k3-Xmn" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s1R-bf-hfq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2642" y="246"/>
+            <point key="canvasLocation" x="2583" y="242"/>
         </scene>
         <!--contaStoryBoard-->
         <scene sceneID="nnk-CJ-cfN">
@@ -472,7 +472,7 @@
                 <viewControllerPlaceholder storyboardName="Conta" referencedIdentifier="contaStoryBoard" id="obs-VO-ehD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90V-Fj-2QK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2566" y="288"/>
+            <point key="canvasLocation" x="2463" y="293"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H00-EA-TjA">
