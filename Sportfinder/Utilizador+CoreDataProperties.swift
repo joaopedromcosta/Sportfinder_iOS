@@ -17,10 +17,10 @@ extension Utilizador {
         return NSFetchRequest<Utilizador>(entityName: "Utilizador")
     }
 
-    @NSManaged public var nome: String?
-    @NSManaged public var id: String?
-    @NSManaged public var email: String?
-    @NSManaged public var morada: String?
-    @NSManaged public var total_pontos: String?
+    @NSManaged public var nome: String
+    @NSManaged public var id: String
+    @NSManaged public var email: String
+    @NSManaged public var morada: String
+    @NSManaged public var total_pontos: String
 
 }

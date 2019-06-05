@@ -42,11 +42,24 @@ public class Utilizador: NSManagedObject {
         
         do{
             results = try appDel.persistentContainer.viewContext.fetch(dataFetchRequest)
-            print(results)
             return results
         } catch{
             
         }
         return nil
+    }
+    
+    //delete data
+    static func delete(id: String, appDel: AppDelegate){
+        let context = appDel.persistentContainer.viewContext
+        let dataFetchRequest = NSFetchRequest<Utilizador>(entityName: "Utilizador")
+        let predicate = NSPredicate(format: "id == %@", id)
+        dataFetchRequest.predicate = predicate
+        
+        if let result = try? appDel.persistentContainer.viewContext.fetch(dataFetchRequest){
+            for object in result{
+                context.delete(object)
+            }
+        }
     }
 }

@@ -26,37 +26,71 @@ class RankingController: UIViewController, UITableViewDataSource, UITableViewDel
         //createListUsersForArray()
     }
     
+    func hasConnectivity() -> Bool {
+        if Reachability.isConnectedToNetwork(){
+            print("Internet Connection Available!")
+            return true
+        }else{
+            print("Internet Connection not Available!")
+            return false
+        }
+    }
+    
     
     func loadUsersFromDB(){
         var concat = ""
         let urlString =  "https://sportfinderapi.000webhostapp.com/slim/api/getUtilizadores"
         guard let url = URL(string: urlString) else{return}
         
-        URLSession.shared.dataTask(with: url){ (data, response, error ) in
-            if error != nil{
-                print(error!.localizedDescription)
+        var listUtilizadores = [Utilizador]()
+        listUtilizadores = Utilizador.getUser(appDel: self.delegate!)!
+        
+        if(!self.hasConnectivity()){
+            print("Nao tem internet")
+            for u in listUtilizadores{
+                var user1 = User()
+                user1.id = u.id
+                user1.nome = u.nome
+                user1.email = u.email
+                user1.morada = u.morada
+                user1.total_pontos = u.total_pontos
+                self.listUsers.append(user1)
+            
+                self.tableView.reloadData()
+            }
+        }
+        else{
+            print("Tem internet")
+            
+            for u in listUtilizadores{
+                Utilizador.delete(id: u.id, appDel: self.delegate!)
             }
             
-            guard let data = data else{return}
-            DispatchQueue.main.async {
-                do{
-                    let response = try JSONDecoder().decode([User].self, from: data)
-                    for user in response{
-                        self.listUsers.append(user)
-                        concat = concat + "[" + user.id + " / " + user.total_pontos + " pts] " + user.nome + " - " + user.email + " --- "
-                        
-                        Utilizador.getUser(appDel: self.delegate!)
-                        Utilizador.saveUser(nome: user.nome, id: user.id, email: user.email, morada: user.morada, total_pontos: user.total_pontos, appDel: self.delegate!)
-                        
-                    }
-                    print("Reloading data table")
-                    self.tableView.reloadData()
-                    print(concat)
-                } catch let jsonError{
-                    print(jsonError)
+            URLSession.shared.dataTask(with: url){ (data, response, error ) in
+                if error != nil{
+                    print(error!.localizedDescription)
                 }
-            }
-        }.resume()
+                
+                guard let data = data else{return}
+                DispatchQueue.main.async {
+                    do{
+                        let response = try JSONDecoder().decode([User].self, from: data)
+                        for user in response{
+                            self.listUsers.append(user)
+                            concat = concat + "[" + user.id + " / " + user.total_pontos + " pts] " + user.nome + " - " + user.email + " --- "
+                                                        
+                            Utilizador.saveUser(nome: user.nome, id: user.id, email: user.email, morada: user.morada, total_pontos: user.total_pontos, appDel: self.delegate!)
+                            
+                        }
+                        print("Reloading data table")
+                        self.tableView.reloadData()
+                        print(concat)
+                    } catch let jsonError{
+                        print(jsonError)
+                    }
+                }
+            }.resume()
+        }
     }
     
     
