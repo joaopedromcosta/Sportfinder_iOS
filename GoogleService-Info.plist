@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>574496360382-qgj7oplh9fe0onhc78vb1q9pcns82qb9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.574496360382-qgj7oplh9fe0onhc78vb1q9pcns82qb9</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>574496360382-ll98rk2hapakhjg3h89ksmc0spiimc5k.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAWaOa0zDp7c3jDw7q31lLYOADw-BwPxyk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>574496360382</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ipvc.estg.Sportfinder</string>
+	<key>PROJECT_ID</key>
+	<string>sport-finder-f864a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sport-finder-f864a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:574496360382:ios:1c9c83b98365d141</string>
+	<key>DATABASE_URL</key>
+	<string>https://sport-finder-f864a.firebaseio.com</string>
+</dict>
+</plist>
