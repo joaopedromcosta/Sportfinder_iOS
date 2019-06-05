@@ -9,13 +9,16 @@
 import UIKit
 
 class RankingController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    var delegate: AppDelegate?
     
     var listUsers = [User]()
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        delegate = UIApplication.shared.delegate as! AppDelegate
+        tableView.rowHeight = 100.0
         // Do any additional setup after loading the view.
         loadUsersFromDB()
         
@@ -35,23 +38,32 @@ class RankingController: UIViewController, UITableViewDataSource, UITableViewDel
             }
             
             guard let data = data else{return}
-            
-            do{
-                let response = try JSONDecoder().decode([User].self, from: data)
-                DispatchQueue.main.async {
+            DispatchQueue.main.async {
+                do{
+                    let response = try JSONDecoder().decode([User].self, from: data)
                     for user in response{
                         self.listUsers.append(user)
                         concat = concat + "[" + user.id + " / " + user.total_pontos + " pts] " + user.nome + " - " + user.email + " --- "
+                        
+                        Utilizador.getUser(appDel: self.delegate!)
+                        Utilizador.saveUser(nome: user.nome, id: user.id, email: user.email, morada: user.morada, total_pontos: user.total_pontos, appDel: self.delegate!)
+                        
                     }
-                    print(concat)
+                    print("Reloading data table")
                     self.tableView.reloadData()
+                    print(concat)
+                } catch let jsonError{
+                    print(jsonError)
                 }
-            } catch let jsonError{
-                print(jsonError)
             }
         }.resume()
     }
     
+    
+    //MARK: CoreData Functions
+    func addUsersToCoreData(){
+        
+    }
     
     //MARK: UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,8 +74,13 @@ class RankingController: UIViewController, UITableViewDataSource, UITableViewDel
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyTableViewCell
         let user:User = listUsers[indexPath.row]
         cell.lblUserName.text = user.nome
-        cell.lblpontuacao.text = user.total_pontos //String(user.pontuacao)
+        cell.lblpontuacao.text = user.total_pontos
         return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
     }
     
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB31099622A7F58A005FCFBF /* Sportfinder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB31099422A7F58A005FCFBF /* Sportfinder.xcdatamodeld */; };
+		EB31099E22A7FF24005FCFBF /* Utilizador+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31099C22A7FF24005FCFBF /* Utilizador+CoreDataClass.swift */; };
+		EB31099F22A7FF24005FCFBF /* Utilizador+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31099D22A7FF24005FCFBF /* Utilizador+CoreDataProperties.swift */; };
 		EB7CCF5822A6B4FA005A703A /* RankingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7CCF5722A6B4FA005A703A /* RankingController.swift */; };
 		EB7CCF5A22A6D0FD005A703A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7CCF5922A6D0FD005A703A /* User.swift */; };
 		EB7CCF5E22A6D767005A703A /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7CCF5D22A6D767005A703A /* MyTableViewCell.swift */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB31099522A7F58A005FCFBF /* Sportfinder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sportfinder.xcdatamodel; sourceTree = "<group>"; };
+		EB31099C22A7FF24005FCFBF /* Utilizador+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utilizador+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EB31099D22A7FF24005FCFBF /* Utilizador+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utilizador+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		EB7CCF5722A6B4FA005A703A /* RankingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingController.swift; sourceTree = "<group>"; };
 		EB7CCF5922A6D0FD005A703A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EB7CCF5D22A6D767005A703A /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
@@ -59,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB31099B22A7F756005FCFBF /* CoreDataUser */ = {
+			isa = PBXGroup;
+			children = (
+				EB31099C22A7FF24005FCFBF /* Utilizador+CoreDataClass.swift */,
+				EB31099D22A7FF24005FCFBF /* Utilizador+CoreDataProperties.swift */,
+			);
+			name = CoreDataUser;
+			sourceTree = "<group>";
+		};
 		EF369ED9229EDF1300B6E21A = {
 			isa = PBXGroup;
 			children = (
@@ -79,7 +94,9 @@
 			isa = PBXGroup;
 			children = (
 				EF369EF9229F1A1500B6E21A /* CustomClass */,
+				EB31099B22A7F756005FCFBF /* CoreDataUser */,
 				EF369EE5229EDF1300B6E21A /* AppDelegate.swift */,
+				EB31099422A7F58A005FCFBF /* Sportfinder.xcdatamodeld */,
 				EF369EEE229EDF1400B6E21A /* LaunchScreen.storyboard */,
 				EF369EF1229EDF1400B6E21A /* Info.plist */,
 				EF369EEC229EDF1400B6E21A /* Assets.xcassets */,
@@ -242,11 +259,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF369EFB229F1A3700B6E21A /* RoundView.swift in Sources */,
+				EB31099622A7F58A005FCFBF /* Sportfinder.xcdatamodeld in Sources */,
 				EB7CCF5E22A6D767005A703A /* MyTableViewCell.swift in Sources */,
 				EF369F02229F28AB00B6E21A /* SelecionarDesportoViewController.swift in Sources */,
+				EB31099E22A7FF24005FCFBF /* Utilizador+CoreDataClass.swift in Sources */,
 				EF369EF8229EE3BD00B6E21A /* LoginViewController.swift in Sources */,
 				EF369EE6229EDF1300B6E21A /* AppDelegate.swift in Sources */,
 				EB7CCF5822A6B4FA005A703A /* RankingController.swift in Sources */,
+				EB31099F22A7FF24005FCFBF /* Utilizador+CoreDataProperties.swift in Sources */,
 				EF369EFD229F1EEB00B6E21A /* MenuViewController.swift in Sources */,
 				EB7CCF5A22A6D0FD005A703A /* User.swift in Sources */,
 			);
@@ -448,6 +468,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EB31099422A7F58A005FCFBF /* Sportfinder.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EB31099522A7F58A005FCFBF /* Sportfinder.xcdatamodel */,
+			);
+			currentVersion = EB31099522A7F58A005FCFBF /* Sportfinder.xcdatamodel */;
+			path = Sportfinder.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EF369EDA229EDF1300B6E21A /* Project object */;
 }
