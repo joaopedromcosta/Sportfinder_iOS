@@ -15,6 +15,7 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
     @IBOutlet var tvDesportos: UITableView!
     
     var arrayDesportos = [EntityReturnDesportos]()
+    var arraYDesportosSelected = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,7 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         }*/
         print(arrayDesportos.count)
         
-        self.tvDesportos.backgroundColor = UIColor.red
+        self.tvDesportos.backgroundColor = UIColor(red:234/255.0, green:234/255.0, blue:234/255.0, alpha: 1)
         
         self.tvDesportos.rowHeight = 70.0
     }
@@ -88,7 +89,7 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         
         cell.backgroundColor = UIColor.white
         cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.borderWidth = 0.5
+        cell.layer.borderWidth = 0.1
         cell.layer.cornerRadius = 30
         cell.clipsToBounds = true
         
@@ -113,10 +114,75 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         cell.contentView.backgroundColor = [UIColor yellowColor];*/
         
         var cell  = tableView.cellForRow(at: indexPath)
-        cell?.backgroundColor = UIColor.blue
-        cell?.accessoryView.
+        
+        var nomeDesporto = arrayDesportos[indexPath.row].nome
+        
+        var find = false
+        var auxCount = -1
+        var aux = -1
+        
+        if ( arraYDesportosSelected.count == 0 ) {
+            arraYDesportosSelected.append(nomeDesporto)
+        } else {
+            for nomeDesp in arraYDesportosSelected {
+                aux += 1
+                if( nomeDesp ==  nomeDesporto ){
+                    find = true
+                    auxCount = aux
+                    
+                }
+            }
+            
+            if (find) {
+                arraYDesportosSelected.remove(at: auxCount)
+                cell?.backgroundColor = UIColor(red:255/255.0, green:0/255.0, blue:255/255.0, alpha: 0.5)
+            } else {
+                arraYDesportosSelected.append(nomeDesporto)
+                cell?.backgroundColor = UIColor(red:185/255.0, green:253/255.0, blue:216/255.0, alpha: 0.5)
+            }
+        }
         
         
+       // verificarDesportoSelecionado(nomeDesporto: arrayDesportos[indexPath.row].nome)
     }
+    
+    @IBAction func btnTeste(_ sender: Any) {
+        printSelect()
+    }
+    
+    func verificarDesportoSelecionado(nomeDesporto:String){
+        
+        var find = false
+        var auxCount = -1
+        var aux = -1
+        
+        if ( arraYDesportosSelected.count == 0 ) {
+            arraYDesportosSelected.append(nomeDesporto)
+        } else {
+            for nomeDesp in arraYDesportosSelected {
+                aux += 1
+                if( nomeDesp ==  nomeDesporto ){
+                    find = true
+                    auxCount = aux
+                    
+                }
+            }
+            
+            if (find) {
+                arraYDesportosSelected.remove(at: auxCount)
+            } else {
+                arraYDesportosSelected.append(nomeDesporto)
+            }
+        }
+        printSelect()
+    }
+    
+    func printSelect() {
+        print("lalalalla")
+        for c in arraYDesportosSelected {
+            print("pedrosec" + c)
+        }
+    }
+    
 }
 
