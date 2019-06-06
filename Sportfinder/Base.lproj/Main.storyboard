@@ -38,7 +38,7 @@
                                     <action selector="btnLogin:" destination="56Y-gU-9CZ" eventType="touchUpInside" id="f9M-yc-hf9"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YZW-pI-84J">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EmailChange" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YZW-pI-84J">
                                 <rect key="frame" x="20" y="378" width="335" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="s4r-0K-zu3"/>
