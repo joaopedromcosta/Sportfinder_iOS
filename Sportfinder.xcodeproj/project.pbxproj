@@ -14,7 +14,7 @@
 		EB7CCF5822A6B4FA005A703A /* RankingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7CCF5722A6B4FA005A703A /* RankingController.swift */; };
 		EB7CCF5A22A6D0FD005A703A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7CCF5922A6D0FD005A703A /* User.swift */; };
 		EB7CCF5E22A6D767005A703A /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7CCF5D22A6D767005A703A /* MyTableViewCell.swift */; };
-		1E05940422A0448F00ACAD9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E05940322A0448F00ACAD9E /* GoogleService-Info.plist */; };
+        	1E05940422A0448F00ACAD9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E05940322A0448F00ACAD9E /* GoogleService-Info.plist */; };
 		C51E5F2FE0B10AB58F1BE249 /* Pods_Sportfinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681AA3C85510C95F609FE8B6 /* Pods_Sportfinder.framework */; };
 		EF369EE6229EDF1300B6E21A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF369EE5229EDF1300B6E21A /* AppDelegate.swift */; };
 		EF369EEB229EDF1300B6E21A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF369EE9229EDF1300B6E21A /* Main.storyboard */; };
@@ -40,7 +40,7 @@
 		EB7CCF5722A6B4FA005A703A /* RankingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingController.swift; sourceTree = "<group>"; };
 		EB7CCF5922A6D0FD005A703A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EB7CCF5D22A6D767005A703A /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
-		1E05940322A0448F00ACAD9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+        1E05940322A0448F00ACAD9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2FB903156D2A27674691B110 /* Pods-Sportfinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sportfinder.release.xcconfig"; path = "Target Support Files/Pods-Sportfinder/Pods-Sportfinder.release.xcconfig"; sourceTree = "<group>"; };
 		681AA3C85510C95F609FE8B6 /* Pods_Sportfinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sportfinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF369EE2229EDF1300B6E21A /* Sportfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sportfinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,7 +59,7 @@
 		EF369F0B229F32CD00B6E21A /* Historico.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Historico.storyboard; sourceTree = "<group>"; };
 		EF369F0F229F361500B6E21A /* Ranking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ranking.storyboard; sourceTree = "<group>"; };
 		EF369F12229F36A000B6E21A /* Conta.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Conta.storyboard; sourceTree = "<group>"; };
-		F320DB29CF4022CA45CF2150 /* Pods-Sportfinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sportfinder.debug.xcconfig"; path = "Target Support Files/Pods-Sportfinder/Pods-Sportfinder.debug.xcconfig"; sourceTree = "<group>"; };
+        F320DB29CF4022CA45CF2150 /* Pods-Sportfinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sportfinder.debug.xcconfig"; path = "Target Support Files/Pods-Sportfinder/Pods-Sportfinder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C51E5F2FE0B10AB58F1BE249 /* Pods_Sportfinder.framework in Frameworks */,
+            	C51E5F2FE0B10AB58F1BE249 /* Pods_Sportfinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +81,8 @@
 				EB31099D22A7FF24005FCFBF /* Utilizador+CoreDataProperties.swift */,
 			);
 			name = CoreDataUser;
+			sourceTree = "<group>";
+		};
 		4734F9E76D832FD1D9B7F072 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +91,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EB4B99A34BB8EF825E9CDF6F /* Pods */ = {
+	        EB4B99A34BB8EF825E9CDF6F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				F320DB29CF4022CA45CF2150 /* Pods-Sportfinder.debug.xcconfig */,
@@ -102,10 +104,10 @@
 		EF369ED9229EDF1300B6E21A = {
 			isa = PBXGroup;
 			children = (
-				1E05940322A0448F00ACAD9E /* GoogleService-Info.plist */,
+            	1E05940322A0448F00ACAD9E /* GoogleService-Info.plist */,
 				EF369EE4229EDF1300B6E21A /* Sportfinder */,
 				EF369EE3229EDF1300B6E21A /* Products */,
-				EB4B99A34BB8EF825E9CDF6F /* Pods */,
+                EB4B99A34BB8EF825E9CDF6F /* Pods */,
 				4734F9E76D832FD1D9B7F072 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -217,11 +219,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF369EF4229EDF1400B6E21A /* Build configuration list for PBXNativeTarget "Sportfinder" */;
 			buildPhases = (
-				849053D92F74C5942DF98B25 /* [CP] Check Pods Manifest.lock */,
+            	849053D92F74C5942DF98B25 /* [CP] Check Pods Manifest.lock */,
 				EF369EDE229EDF1300B6E21A /* Sources */,
 				EF369EDF229EDF1300B6E21A /* Frameworks */,
 				EF369EE0229EDF1300B6E21A /* Resources */,
-				B3FD214EB3127886B1B9DEC6 /* [CP] Embed Pods Frameworks */,
+                B3FD214EB3127886B1B9DEC6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -277,7 +279,7 @@
 				EF369F10229F361500B6E21A /* Ranking.storyboard in Resources */,
 				EF369EED229EDF1400B6E21A /* Assets.xcassets in Resources */,
 				EF369F09229F322100B6E21A /* Favoritos.storyboard in Resources */,
-				1E05940422A0448F00ACAD9E /* GoogleService-Info.plist in Resources */,
+                1E05940422A0448F00ACAD9E /* GoogleService-Info.plist in Resources */,
 				EF369EEB229EDF1300B6E21A /* Main.storyboard in Resources */,
 				EF369F0C229F32CD00B6E21A /* Historico.storyboard in Resources */,
 			);
@@ -487,7 +489,7 @@
 		};
 		EF369EF5229EDF1400B6E21A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F320DB29CF4022CA45CF2150 /* Pods-Sportfinder.debug.xcconfig */;
+            baseConfigurationReference = F320DB29CF4022CA45CF2150 /* Pods-Sportfinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -506,7 +508,7 @@
 		};
 		EF369EF6229EDF1400B6E21A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FB903156D2A27674691B110 /* Pods-Sportfinder.release.xcconfig */;
+            baseConfigurationReference = 2FB903156D2A27674691B110 /* Pods-Sportfinder.release.xcconfig */;            
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -559,5 +561,6 @@
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = EF369EDA229EDF1300B6E21A /* Project object */;
+rootObject = EF369EDA229EDF1300B6E21A /* Project object */;
 }
+
