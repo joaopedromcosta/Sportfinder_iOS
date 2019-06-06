@@ -9,6 +9,11 @@
 import UIKit
 
 class TableViewCellDesportos: UITableViewCell {
+    
+    
+    //MARK: Properties
+    @IBOutlet weak var tvNomeDesporto: UILabel!
+    @IBOutlet weak var IVIconDesporto: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,10 +42,6 @@ class TableViewCellDesportos: UITableViewCell {
         }
     }
     
-    //MARK: Properties
-    
-    @IBOutlet weak var tvNomeDesporto: UILabel!
-    @IBOutlet weak var IVIconDesporto: UIImageView!
     
     
     

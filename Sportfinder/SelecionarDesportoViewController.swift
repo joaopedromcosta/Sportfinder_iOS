@@ -96,12 +96,27 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+  
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 20
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+       /* UITableViewCell *cell = (UITableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+        cell.contentView.backgroundColor = [UIColor yellowColor];*/
+        
+        var cell  = tableView.cellForRow(at: indexPath)
+        cell?.backgroundColor = UIColor.blue
+        cell?.accessoryView.
+        
+        
     }
 }
 
