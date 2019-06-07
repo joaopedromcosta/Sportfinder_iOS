@@ -21,6 +21,8 @@
 		EF369F0C229F32CD00B6E21A /* Historico.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF369F0B229F32CD00B6E21A /* Historico.storyboard */; };
 		EF369F10229F361500B6E21A /* Ranking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF369F0F229F361500B6E21A /* Ranking.storyboard */; };
 		EF369F13229F36A000B6E21A /* Conta.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF369F12229F36A000B6E21A /* Conta.storyboard */; };
+		EFFD423E22A80DC900AB22AD /* favoritosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD423D22A80DC900AB22AD /* favoritosTableViewController.swift */; };
+		EFFD424022A80ED600AB22AD /* FavoritosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD423F22A80ED600AB22AD /* FavoritosTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		EF369F0B229F32CD00B6E21A /* Historico.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Historico.storyboard; sourceTree = "<group>"; };
 		EF369F0F229F361500B6E21A /* Ranking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ranking.storyboard; sourceTree = "<group>"; };
 		EF369F12229F36A000B6E21A /* Conta.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Conta.storyboard; sourceTree = "<group>"; };
+		EFFD423D22A80DC900AB22AD /* favoritosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favoritosTableViewController.swift; sourceTree = "<group>"; };
+		EFFD423F22A80ED600AB22AD /* FavoritosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				EF369F08229F322100B6E21A /* Favoritos.storyboard */,
+				EFFD423D22A80DC900AB22AD /* favoritosTableViewController.swift */,
+				EFFD423F22A80ED600AB22AD /* FavoritosTableViewCell.swift */,
 			);
 			name = Favoritos;
 			sourceTree = "<group>";
@@ -235,8 +241,10 @@
 				EF369EFB229F1A3700B6E21A /* RoundView.swift in Sources */,
 				EF369F02229F28AB00B6E21A /* SelecionarDesportoViewController.swift in Sources */,
 				EF369EF8229EE3BD00B6E21A /* LoginViewController.swift in Sources */,
+				EFFD424022A80ED600AB22AD /* FavoritosTableViewCell.swift in Sources */,
 				EF369EE6229EDF1300B6E21A /* AppDelegate.swift in Sources */,
 				EF369EFD229F1EEB00B6E21A /* MenuViewController.swift in Sources */,
+				EFFD423E22A80DC900AB22AD /* favoritosTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
