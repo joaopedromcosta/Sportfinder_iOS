@@ -130,4 +130,17 @@ class RankingController: UIViewController, UITableViewDataSource, UITableViewDel
         return [viewProfile]
     }
     
+    
+    //MARK: prepare for Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let id = sender as! IndexPath
+        if(segue.identifier == "openProfileSegue"){
+            let userProfileDetails = (segue.destination as! UserProfileDetails)
+            userProfileDetails.nome = listUsers[id.row].nome
+            userProfileDetails.email = listUsers[id.row].email
+            userProfileDetails.morada = listUsers[id.row].morada
+            userProfileDetails.total_pontos = listUsers[id.row].total_pontos
+        }	
+    }
+    
 }

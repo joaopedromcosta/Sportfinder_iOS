@@ -33,6 +33,7 @@ class LoginViewController: UIViewController {
         print(email)
         print(pass)
         
+        /*
         if(email.isEmpty && pass.isEmpty){
             txtError.text = "Por favor insira as credenciais"
             return
@@ -48,13 +49,15 @@ class LoginViewController: UIViewController {
                     self.txtError.text = "Credenciais inválidas"
                     return
                 }
-                print("deu crlh")
                 self.performSegue(withIdentifier: "menuPrincipal", sender: self)
                 
                 
                 
             }
         }
+        */
+        self.performSegue(withIdentifier: "menuPrincipal", sender: self)
+
         
     }
     

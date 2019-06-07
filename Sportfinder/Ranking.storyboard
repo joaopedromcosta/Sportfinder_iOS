@@ -53,7 +53,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzg-oP-OHh">
-                                                    <rect key="frame" x="305" y="57" width="25" height="20.5"/>
+                                                    <rect key="frame" x="305" y="57.5" width="25" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -99,20 +99,49 @@
             </objects>
             <point key="canvasLocation" x="1245.5999999999999" y="-183.05847076461771"/>
         </scene>
-        <!--View Controller-->
+        <!--User Profile Details-->
         <scene sceneID="cnc-2j-lqC">
             <objects>
-                <viewController id="NN8-m8-uaq" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mv6-8B-Op9">
+                <viewController id="NN8-m8-uaq" customClass="UserProfileDetails" customModule="Sportfinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mv6-8B-Op9" customClass="UserP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HJ-oY-RqU">
+                                <rect key="frame" x="157.5" y="104" width="60" height="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hp9-Ck-7tf">
+                                <rect key="frame" x="167" y="140" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PnS-OR-9Oy">
+                                <rect key="frame" x="0.0" y="189" width="375" height="478"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.85882352939999995" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hp9-Ck-7tf" firstAttribute="centerX" secondItem="mv6-8B-Op9" secondAttribute="centerX" id="ZsO-CR-E3R"/>
+                            <constraint firstItem="hp9-Ck-7tf" firstAttribute="top" secondItem="4HJ-oY-RqU" secondAttribute="bottom" constant="10" id="gnj-2Y-Tbs"/>
+                            <constraint firstItem="4HJ-oY-RqU" firstAttribute="centerX" secondItem="mv6-8B-Op9" secondAttribute="centerX" id="haj-Ob-HSk"/>
+                            <constraint firstItem="4HJ-oY-RqU" firstAttribute="top" secondItem="HhI-6a-F2E" secondAttribute="top" constant="40" id="xYb-N8-SNg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HhI-6a-F2E"/>
                     </view>
+                    <connections>
+                        <outlet property="lblEmailUser" destination="hp9-Ck-7tf" id="mW6-Cl-cd1"/>
+                        <outlet property="lblNomeUser" destination="4HJ-oY-RqU" id="mlB-MP-RVi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJg-Ud-Jyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2039" y="-183"/>
+            <point key="canvasLocation" x="2037.5999999999999" y="-183.05847076461771"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KBp-eL-I5A">
