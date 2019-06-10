@@ -9,13 +9,19 @@
 
 import UIKit
 
-class SelecionarDesportoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegateFlowLayout {
+class SelecionarDesportoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
+    
     
     //MARK:outlet
     @IBOutlet var tvDesportos: UITableView!
+
     
     var arrayDesportos = [EntityReturnDesportos]()
     var arraYDesportosSelected = [String]()
+    var filteredArrayDesportos = [EntityReturnDesportos]()
+    
+    //var searchController = UISearchController()
+    //var resultsController = UITableViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +38,10 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         self.tvDesportos.backgroundColor = UIColor(red:234/255.0, green:234/255.0, blue:234/255.0, alpha: 1)
         
         self.tvDesportos.rowHeight = 70.0
+    
     }
     
     func getArrayDesportos(){
-        
-        var  arrayDesportosAux = [EntityReturnDesportos]()
         var concat = ""
         var urlString = "https://sportfinderapi.000webhostapp.com/slim/api/getDesportos"
         guard let url =  URL (string: urlString) else { return }
@@ -57,6 +62,7 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
                         self.arrayDesportos.append(d)
                         //print(arrayDesportosAux.count)
                     }
+                    self.filteredArrayDesportos =  self.arrayDesportos
                     print("Reloading table data..."	)
                     self.tvDesportos.reloadData()
                 }catch let jsonError {
@@ -84,18 +90,34 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellDesporto", for: indexPath) as! TableViewCellDesportos
         let ec:EntityReturnDesportos = arrayDesportos[indexPath.row] as! EntityReturnDesportos
+        
         cell.tvNomeDesporto.text = ec.nome
         cell.IVIconDesporto.image = UIImage(named: "football_ball")
-        
-        cell.backgroundColor = UIColor.white
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 0.1
         cell.layer.cornerRadius = 30
         cell.clipsToBounds = true
         
+        for c in arraYDesportosSelected {
+            print("pedrosec" + c)
+        }
+    
         
+        if(arraYDesportosSelected.count > 0) {
+            for d in arraYDesportosSelected {
+                if ( ec.nome == d ) {
+                    cell.backgroundColor = UIColor(red:185/255.0, green:253/255.0, blue:216/255.0, alpha: 0.5)
+                }else {
+                    cell.backgroundColor = UIColor.white
+                }
+            }
+        }else {
+            cell.backgroundColor = UIColor.white
+        }
         return cell
     }
+    
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
@@ -107,7 +129,6 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 20
     }
-    
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
        /* UITableViewCell *cell = (UITableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
@@ -123,6 +144,8 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         
         if ( arraYDesportosSelected.count == 0 ) {
             arraYDesportosSelected.append(nomeDesporto)
+            cell?.backgroundColor = UIColor(red:185/255.0, green:253/255.0, blue:216/255.0, alpha: 0.5)
+            
         } else {
             for nomeDesp in arraYDesportosSelected {
                 aux += 1
@@ -135,26 +158,25 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
             
             if (find) {
                 arraYDesportosSelected.remove(at: auxCount)
-                cell?.backgroundColor = UIColor(red:255/255.0, green:0/255.0, blue:255/255.0, alpha: 0.5)
+                cell?.backgroundColor = UIColor.white
             } else {
                 arraYDesportosSelected.append(nomeDesporto)
                 cell?.backgroundColor = UIColor(red:185/255.0, green:253/255.0, blue:216/255.0, alpha: 0.5)
             }
         }
         
-        
-       // verificarDesportoSelecionado(nomeDesporto: arrayDesportos[indexPath.row].nome)
+        print("pedro" + String(arraYDesportosSelected.count))
+        //printSelect()
+        //verificarDesportoSelecionado(nomeDesporto: arrayDesportos[indexPath.row].nome)
     }
     
-    @IBAction func btnTeste(_ sender: Any) {
-        printSelect()
-    }
-    
-    func verificarDesportoSelecionado(nomeDesporto:String){
-        
+    /*func verificarDesportoSelecionado(nomeDesporto:String){
+        print("pedroaqui")
         var find = false
         var auxCount = -1
         var aux = -1
+        
+         //printSelect()
         
         if ( arraYDesportosSelected.count == 0 ) {
             arraYDesportosSelected.append(nomeDesporto)
@@ -164,24 +186,52 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
                 if( nomeDesp ==  nomeDesporto ){
                     find = true
                     auxCount = aux
-                    
                 }
             }
-            
             if (find) {
                 arraYDesportosSelected.remove(at: auxCount)
             } else {
                 arraYDesportosSelected.append(nomeDesporto)
             }
         }
-        printSelect()
-    }
+    }*/
     
-    func printSelect() {
+   /* func printSelect() {
         print("lalalalla")
         for c in arraYDesportosSelected {
             print("pedrosec" + c)
         }
+    }
+ */
+    
+    //searchbar
+    override func viewWillAppear(_ animated: Bool) {
+        let searchController = UISearchController(searchResultsController: nil)
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.placeholder =  "Pesquisar"
+        searchController.searchBar.enablesReturnKeyAutomatically = true
+        searchController.searchBar.barTintColor =  UIColor.white
+        searchController.searchBar.delegate = self
+        
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filterTableDesportos(searchText: searchText)
+    }
+    
+    func filterTableDesportos(searchText: String){
+        arrayDesportos.removeAll()
+        if(searchText.isEmpty){
+            arrayDesportos.append(contentsOf: filteredArrayDesportos)
+        } else {
+            for d in filteredArrayDesportos {
+                if d.nome.lowercased().contains(searchText.lowercased()) {
+                    arrayDesportos.append(d)
+                }
+            }
+        }
+        tvDesportos.reloadData()
     }
     
 }
