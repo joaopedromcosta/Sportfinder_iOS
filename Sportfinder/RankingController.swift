@@ -108,22 +108,21 @@ class RankingController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyTableViewCell
         let user:User = listUsers[indexPath.row]
+        cell.lblPosicao.text = String(indexPath.row + 1)
         cell.lblUserName.text = user.nome
-        cell.lblpontuacao.text = user.total_pontos
+        cell.lblpontuacao.text = user.total_pontos + " pts"
 
+        if(indexPath.row != 0){
+            cell.imgFirstPlaceIcon.isHidden = true
+        }
+        
         var viewProfileArrow = UIButton(type: .custom) as UIButton
         viewProfileArrow.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         viewProfileArrow.addTarget(self, action: #selector(accessoryButtonTapped), for: .touchUpInside)
         viewProfileArrow.setImage(UIImage(named: "arrowRow"), for: UIControl.State.normal)
         
         cell.accessoryView = viewProfileArrow as UIView
-        /*
-        var imageView : UIImageView
-        imageView  = UIImageView(frame:CGRect(x: 20, y: 20, width: 30, height: 30))
-        imageView.image = UIImage(named: "arrowRow")
-        
-        cell.accessoryView = imageView
- */
+
         return cell
     }
     
@@ -154,8 +153,11 @@ class RankingController: UIViewController, UITableViewDataSource, UITableViewDel
         let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.tableView)
         let indexPath = self.tableView.indexPathForRow(at: buttonPosition)
         
-        self.performSegue(withIdentifier: "openProfileSegue", sender: indexPath)
-        print(buttonPosition)
+        if(self.hasConnectivity()){
+            self.performSegue(withIdentifier: "openProfileSegue", sender: indexPath)
+        } else{
+            showAlert(title: "Sem internet", message: "Por favor ligue-se à internet")
+        }
     }
     
     //MARK: prepare for Segue
@@ -163,11 +165,26 @@ class RankingController: UIViewController, UITableViewDataSource, UITableViewDel
         if(segue.identifier == "openProfileSegue"){
             let id = sender as! IndexPath
             let userProfileDetails = (segue.destination as! UserProfileDetails)
+            userProfileDetails.id = listUsers[id.row].id
             userProfileDetails.nome = listUsers[id.row].nome
             userProfileDetails.email = listUsers[id.row].email
             userProfileDetails.morada = listUsers[id.row].morada
             userProfileDetails.total_pontos = listUsers[id.row].total_pontos
         }	
     }
+    
+    
+    func showAlert(title:String, message:String){
+        // create the alert
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
     
 }
