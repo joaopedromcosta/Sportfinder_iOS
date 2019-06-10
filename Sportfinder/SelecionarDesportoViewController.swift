@@ -103,7 +103,9 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         }
     
         
-        if(arraYDesportosSelected.count > 0) {
+        if(arraYDesportosSelected.count == 0) {
+            cell.backgroundColor = UIColor.white
+        }else {
             for d in arraYDesportosSelected {
                 if ( ec.nome == d ) {
                     cell.backgroundColor = UIColor(red:185/255.0, green:253/255.0, blue:216/255.0, alpha: 0.5)
@@ -111,9 +113,8 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
                     cell.backgroundColor = UIColor.white
                 }
             }
-        }else {
-            cell.backgroundColor = UIColor.white
         }
+        
         return cell
     }
     
