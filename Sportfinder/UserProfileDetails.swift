@@ -21,7 +21,7 @@ class UserProfileDetails: UIViewController{
         super.viewDidLoad()
         print(nome)
         
-        
+        setLabelValues()
     }
     
     func setLabelValues(){

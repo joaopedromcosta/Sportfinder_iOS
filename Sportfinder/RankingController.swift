@@ -19,6 +19,7 @@ class RankingController: UIViewController, UITableViewDataSource, UITableViewDel
         super.viewDidLoad()
         delegate = UIApplication.shared.delegate as! AppDelegate
         tableView.rowHeight = 100.0
+        tableView.allowsSelection = false
         // Do any additional setup after loading the view.
         loadUsersFromDB()
         
@@ -109,6 +110,20 @@ class RankingController: UIViewController, UITableViewDataSource, UITableViewDel
         let user:User = listUsers[indexPath.row]
         cell.lblUserName.text = user.nome
         cell.lblpontuacao.text = user.total_pontos
+
+        var viewProfileArrow = UIButton(type: .custom) as UIButton
+        viewProfileArrow.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        viewProfileArrow.addTarget(self, action: #selector(accessoryButtonTapped), for: .touchUpInside)
+        viewProfileArrow.setImage(UIImage(named: "arrowRow"), for: UIControl.State.normal)
+        
+        cell.accessoryView = viewProfileArrow as UIView
+        /*
+        var imageView : UIImageView
+        imageView  = UIImageView(frame:CGRect(x: 20, y: 20, width: 30, height: 30))
+        imageView.image = UIImage(named: "arrowRow")
+        
+        cell.accessoryView = imageView
+ */
         return cell
     }
     
@@ -118,23 +133,35 @@ class RankingController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "openProfileSegue", sender: tableView)
+        print("SENDER: \(indexPath)")
+        self.performSegue(withIdentifier: "openProfileSegue", sender: indexPath)
     }
     
+    /*
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let viewProfile = UITableViewRowAction(style: .default, title: "Ver Perfil") {
-            action, index in print("Ver: " + String(index.row))
+            action, index in
+            print("Ver: " + String(index.row))
+            print("SENDER: \(indexPath)")
+            self.performSegue(withIdentifier: "openProfileSegue", sender: indexPath)
         }
         viewProfile.backgroundColor = UIColor.blue;
         
         return [viewProfile]
     }
-    
+ */
+    @objc func accessoryButtonTapped(sender: UIButton!) {
+        let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.tableView)
+        let indexPath = self.tableView.indexPathForRow(at: buttonPosition)
+        
+        self.performSegue(withIdentifier: "openProfileSegue", sender: indexPath)
+        print(buttonPosition)
+    }
     
     //MARK: prepare for Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let id = sender as! IndexPath
         if(segue.identifier == "openProfileSegue"){
+            let id = sender as! IndexPath
             let userProfileDetails = (segue.destination as! UserProfileDetails)
             userProfileDetails.nome = listUsers[id.row].nome
             userProfileDetails.email = listUsers[id.row].email

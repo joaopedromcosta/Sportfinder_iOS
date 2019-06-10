@@ -33,8 +33,7 @@ class LoginViewController: UIViewController {
         print(email)
         print(pass)
         
-        /*
-        if(email.isEmpty && pass.isEmpty){
+        /*if(email.isEmpty && pass.isEmpty){
             txtError.text = "Por favor insira as credenciais"
             return
         }else if(email.isEmpty){
@@ -56,9 +55,7 @@ class LoginViewController: UIViewController {
             }
         }
         */
-        self.performSegue(withIdentifier: "menuPrincipal", sender: self)
-
-        
+        self.performSegue(withIdentifier: "menuPrincipal", sender: self)        
     }
     
 }

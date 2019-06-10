@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Ranking Controller-->
+        <!--SportFinder-->
         <scene sceneID="Gjb-kV-Eot">
             <objects>
                 <viewController storyboardIdentifier="rankingStoryBoard" id="gYG-Oz-xj8" customClass="RankingController" customModule="Sportfinder" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,7 +88,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ptQ-5U-jEH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LdV-az-nMB">
+                    <navigationItem key="navigationItem" title="SportFinder" id="LdV-az-nMB">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="oXT-mO-FgM"/>
                     </navigationItem>
                     <connections>
