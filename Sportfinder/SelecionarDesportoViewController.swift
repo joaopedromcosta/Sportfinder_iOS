@@ -14,11 +14,19 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
     
     //MARK:outlet
     @IBOutlet var tvDesportos: UITableView!
-
+    
+    //MARK:actions
+    
+    @IBAction func btnPesquisar(_ sender: Any) {
+        desportosSelectNomeToId()
+        //self.performSegue(withIdentifier: "listarPorDesporto", sender: self.arrayDesportosId)
+    }
+    
     
     var arrayDesportos = [EntityReturnDesportos]()
     var arraYDesportosSelected = [String]()
     var filteredArrayDesportos = [EntityReturnDesportos]()
+    var arrayDesportosId = [String]()
     
     //var searchController = UISearchController()
     //var resultsController = UITableViewController()
@@ -27,7 +35,6 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //getArrayDesportos()
-        teste()
         getArrayDesportos()
         
         /*for d in arrayDesportos {
@@ -72,10 +79,6 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         }.resume()
     }
     
-    func teste() {
-        print("teste")
-        print(arrayDesportos.count)
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("entrei na func number of rows " + String(arrayDesportos.count))
@@ -171,40 +174,6 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         //verificarDesportoSelecionado(nomeDesporto: arrayDesportos[indexPath.row].nome)
     }
     
-    /*func verificarDesportoSelecionado(nomeDesporto:String){
-        print("pedroaqui")
-        var find = false
-        var auxCount = -1
-        var aux = -1
-        
-         //printSelect()
-        
-        if ( arraYDesportosSelected.count == 0 ) {
-            arraYDesportosSelected.append(nomeDesporto)
-        } else {
-            for nomeDesp in arraYDesportosSelected {
-                aux += 1
-                if( nomeDesp ==  nomeDesporto ){
-                    find = true
-                    auxCount = aux
-                }
-            }
-            if (find) {
-                arraYDesportosSelected.remove(at: auxCount)
-            } else {
-                arraYDesportosSelected.append(nomeDesporto)
-            }
-        }
-    }*/
-    
-   /* func printSelect() {
-        print("lalalalla")
-        for c in arraYDesportosSelected {
-            print("pedrosec" + c)
-        }
-    }
- */
-    
     //searchbar
     override func viewWillAppear(_ animated: Bool) {
         let searchController = UISearchController(searchResultsController: nil)
@@ -233,6 +202,27 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
             }
         }
         tvDesportos.reloadData()
+    }
+    
+    func desportosSelectNomeToId(){
+        for desp in arraYDesportosSelected {
+            for d in arrayDesportos {
+                if(desp == d.nome) {
+                    arrayDesportosId.append(d.id)
+                }
+            }
+        }
+        
+        for des in arrayDesportosId {
+            print ("pedro123 " + des)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "listarPorDesporto"){
+            let vcParquesFiltrados = (segue.destination as! VCParquesFiltrados)
+            vcParquesFiltrados.arrayIdDesporto = self.arrayDesportosId
+        }
     }
     
 }
