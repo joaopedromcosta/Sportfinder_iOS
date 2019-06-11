@@ -53,15 +53,8 @@ class LoginViewController: UIViewController {
                 
                 
             }
-        }
-        */
-        self.performSegue(withIdentifier: "menuPrincipal", sender: self)
+        }*/
 
-        
-                print("deu crlh")*/
-                self.performSegue(withIdentifier: "menuPrincipal", sender: self)
-            //}
-        //}      
+        self.performSegue(withIdentifier: "menuPrincipal", sender: self)        
     }
-    
 }

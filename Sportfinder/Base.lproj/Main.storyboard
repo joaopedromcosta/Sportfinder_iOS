@@ -93,8 +93,6 @@
                             <constraint firstItem="XGV-V3-IQ8" firstAttribute="trailing" secondItem="PSU-Tk-BB6" secondAttribute="trailing" constant="100" id="3Cq-kO-PYv"/>
                             <constraint firstItem="zbp-bW-Bgb" firstAttribute="trailing" secondItem="YZW-pI-84J" secondAttribute="trailing" id="8IZ-rB-TBu"/>
                             <constraint firstItem="V0g-xe-Nfa" firstAttribute="top" secondItem="PSU-Tk-BB6" secondAttribute="bottom" constant="5" id="D3N-G8-V9h"/>
-                            <constraint firstItem="6ai-yR-ZEp" firstAttribute="trailing" secondItem="YZW-pI-84J" secondAttribute="trailing" id="TlK-X0-0nS"/>
-                            <constraint firstItem="YZW-pI-84J" firstAttribute="top" secondItem="XGV-V3-IQ8" secondAttribute="top" constant="300" id="Tsb-if-oZY"/>
                             <constraint firstItem="WLL-dd-RMH" firstAttribute="top" secondItem="Q4C-GW-b9b" secondAttribute="bottom" constant="10" id="IVJ-2X-mjc"/>
                             <constraint firstItem="XGV-V3-IQ8" firstAttribute="trailing" secondItem="Q4C-GW-b9b" secondAttribute="trailing" constant="70" id="QMe-Do-EYQ"/>
                             <constraint firstItem="6ai-yR-ZEp" firstAttribute="trailing" secondItem="YZW-pI-84J" secondAttribute="trailing" id="TlK-X0-0nS"/>
@@ -104,12 +102,6 @@
                             <constraint firstItem="PSU-Tk-BB6" firstAttribute="top" secondItem="BIU-EY-E33" secondAttribute="bottom" constant="15" id="XAn-WM-Vdd"/>
                             <constraint firstItem="V0g-xe-Nfa" firstAttribute="centerX" secondItem="lgo-A5-xw4" secondAttribute="centerX" id="YIm-Un-wyX"/>
                             <constraint firstItem="PSU-Tk-BB6" firstAttribute="centerX" secondItem="lgo-A5-xw4" secondAttribute="centerX" id="aUL-3O-Has"/>
-                            <constraint firstItem="BIU-EY-E33" firstAttribute="trailing" secondItem="zbp-bW-Bgb" secondAttribute="trailing" id="bln-bp-AAw"/>
-                            <constraint firstItem="PSU-Tk-BB6" firstAttribute="leading" secondItem="XGV-V3-IQ8" secondAttribute="leading" constant="100" id="gbA-Fv-3du"/>
-                            <constraint firstItem="XGV-V3-IQ8" firstAttribute="trailing" secondItem="YZW-pI-84J" secondAttribute="trailing" constant="20" id="nEv-vD-6cR"/>
-                            <constraint firstItem="BIU-EY-E33" firstAttribute="leading" secondItem="zbp-bW-Bgb" secondAttribute="leading" id="s4a-bO-mMo"/>
-                            <constraint firstItem="zbp-bW-Bgb" firstAttribute="top" secondItem="YZW-pI-84J" secondAttribute="bottom" constant="10" id="uzR-Ay-ukH"/>
-                            <constraint firstItem="BIU-EY-E33" firstAttribute="top" secondItem="zbp-bW-Bgb" secondAttribute="bottom" constant="10" id="veE-bI-fvh"/>
                             <constraint firstItem="Q4C-GW-b9b" firstAttribute="leading" secondItem="XGV-V3-IQ8" secondAttribute="leading" constant="110" id="bEY-2Y-hFd"/>
                             <constraint firstItem="BIU-EY-E33" firstAttribute="trailing" secondItem="zbp-bW-Bgb" secondAttribute="trailing" id="bln-bp-AAw"/>
                             <constraint firstItem="PSU-Tk-BB6" firstAttribute="leading" secondItem="XGV-V3-IQ8" secondAttribute="leading" constant="100" id="gbA-Fv-3du"/>
