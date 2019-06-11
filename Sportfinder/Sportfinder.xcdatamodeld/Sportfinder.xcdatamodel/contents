@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.98" systemVersion="18G29g" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FavoritosCell" representedClassName="FavoritosCell" syncable="YES">
+        <attribute name="avaliacao" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fotoData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Utilizador" representedClassName="Utilizador" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
@@ -8,6 +14,7 @@
         <attribute name="total_pontos" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
+        <element name="FavoritosCell" positionX="-63" positionY="18" width="128" height="105"/>
         <element name="Utilizador" positionX="-63" positionY="-18" width="128" height="120"/>
     </elements>
 </model>
