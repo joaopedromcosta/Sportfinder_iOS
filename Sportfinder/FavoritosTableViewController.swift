@@ -11,7 +11,7 @@ import UIKit
 class FavoritosTableViewController: UITableViewController, UISearchBarDelegate{
     //
     var delegate: AppDelegate?
-    let userID:String = "4"
+    var userID:String = "5"
     //
     var locaisArray = [EntityLocal]()
     var locaisArrayFiltrados = [EntityLocal]()
@@ -28,7 +28,8 @@ class FavoritosTableViewController: UITableViewController, UISearchBarDelegate{
         super.viewDidLoad()
         delegate = UIApplication.shared.delegate as! AppDelegate
         //
-        //userID = MySingleton.shared.getUserID()
+        //userID = GlobalVariables.loggedUserId
+        print("User ID: \(userID)")
         //
         self.tableViewReference.refreshControl?.addTarget(self, action: #selector(FavoritosTableViewController.refreshUsers), for: UIControl.Event.valueChanged)
         //
@@ -121,20 +122,27 @@ extension FavoritosTableViewController: FavoritosTableViewCellDelegate{
                             let arrayLocaisTmp = localRequest
                             var local1:EntityLocal
                             let arraySize = arrayLocaisTmp.count-1
-                            for index in 0...arraySize{
-                                local1 = EntityLocal()
-                                local1.id_local = arrayLocaisTmp[index].id!
-                                local1.nome = arrayLocaisTmp[index].nome!
-                                let numeroFloat = Float(arrayLocaisTmp[index].media_local!)
-                                let numero = String(format: "%.1f", numeroFloat!)
-                                local1.mediaLocal = numero
-                                local1.foto_url = "https://sportfinderapi.000webhostapp.com/img/compressed/"+arrayLocaisTmp[index].url_foto_local!+".png"
-                                self.locaisArray.append(local1)
+                            if(arrayLocaisTmp.isEmpty){
+                                FavoritosCell.removerLocais(appDel: self.delegate!)
+                                self.refreshControl?.endRefreshing()
+                                self.tableViewReference.reloadData()
+                                return
+                            }else{
+                                for index in 0...arraySize{
+                                    local1 = EntityLocal()
+                                    local1.id_local = arrayLocaisTmp[index].id!
+                                    local1.nome = arrayLocaisTmp[index].nome!
+                                    let numeroFloat = Float(arrayLocaisTmp[index].media_local!)
+                                    let numero = String(format: "%.1f", numeroFloat!)
+                                    local1.mediaLocal = numero
+                                    local1.foto_url = "https://sportfinderapi.000webhostapp.com/img/compressed/"+arrayLocaisTmp[index].url_foto_local!+".png"
+                                    self.locaisArray.append(local1)
+                                }
+                                //
+                                self.locaisArrayFiltrados.append(contentsOf: self.locaisArray)
+                                //self.tableViewReference.reloadData()
+                                self.getImagesAndReloadTable()
                             }
-                            //
-                            self.locaisArrayFiltrados.append(contentsOf: self.locaisArray)
-                            //self.tableViewReference.reloadData()
-                            self.getImagesAndReloadTable()
                         }catch let jsonErr{
                             print("JSON decode error: ", jsonErr)
                         }
