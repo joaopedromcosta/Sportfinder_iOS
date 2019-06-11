@@ -28,7 +28,7 @@ class FavoritosTableViewController: UITableViewController, UISearchBarDelegate{
         super.viewDidLoad()
         delegate = UIApplication.shared.delegate as! AppDelegate
         //
-        //userID = GlobalVariables.loggedUserId
+        userID = GlobalVariables.loggedUserId
         print("User ID: \(userID)")
         //
         self.tableViewReference.refreshControl?.addTarget(self, action: #selector(FavoritosTableViewController.refreshUsers), for: UIControl.Event.valueChanged)
