@@ -13,6 +13,13 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        if((Auth.auth().currentUser) != nil){
+            print("COM LOGIN FEITO")
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "menuPrincipal", sender: self)
+            }
+        }
     }
     
     //MARK: Properties
@@ -33,7 +40,7 @@ class LoginViewController: UIViewController {
         print(email)
         print(pass)
         
-        /*if(email.isEmpty && pass.isEmpty){
+        if(email.isEmpty && pass.isEmpty){
             txtError.text = "Por favor insira as credenciais"
             return
         }else if(email.isEmpty){
@@ -48,13 +55,41 @@ class LoginViewController: UIViewController {
                     self.txtError.text = "Credenciais inválidas"
                     return
                 }
-                self.performSegue(withIdentifier: "menuPrincipal", sender: self)
+                var concat = ""
+                var userEmail:String!
+                userEmail = Auth.auth().currentUser?.email
+                var emailAspas = "\"" + userEmail! + "\""
+                print(emailAspas)
+                let urlString =  "https://sportfinderapi.000webhostapp.com/slim/api/getIdFromEmail/\(userEmail!)"
+
+                print(urlString)
+                guard let url = URL(string: urlString) else{return}
                 
                 
+                URLSession.shared.dataTask(with: url){ (data, response, error ) in
+                    if error != nil{
+                        print(error!.localizedDescription)
+                    }
+                    
+                    guard let data = data else{return}
+                    //print(data)
+                    //self.performSegue(withIdentifier: "menuPrincipal", sender: self)
+                    
+                    DispatchQueue.main.async {
+                        do{
+                            //let response = try JSONDecoder().decode([String].self, from: data)
+                            let responseString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+                            GlobalVariables.loggedUserId = responseString! as String
+                            self.performSegue(withIdentifier: "menuPrincipal", sender: self)
+                        } catch let jsonError{
+                            print(jsonError)
+                        }
+                    }
+                    }.resume()
                 
             }
-        }*/
+        }
 
-        self.performSegue(withIdentifier: "menuPrincipal", sender: self)        
+        //self.performSegue(withIdentifier: "menuPrincipal", sender: self)
     }
 }

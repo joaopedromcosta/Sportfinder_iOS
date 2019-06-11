@@ -12,19 +12,16 @@
 		1E15FE9B22A70EE400101A9E /* EntityReturnDesportos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E15FE9A22A70EE400101A9E /* EntityReturnDesportos.swift */; };
 		C51E5F2FE0B10AB58F1BE249 /* Pods_Sportfinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681AA3C85510C95F609FE8B6 /* Pods_Sportfinder.framework */; };
 		EB02070E22AF0E0F004AEBD6 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB02070D22AF0E0F004AEBD6 /* Week.swift */; };
+		EB2F4AB322B01B3200A860AD /* ContaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F4AB222B01B3200A860AD /* ContaController.swift */; };
 		EB31099622A7F58A005FCFBF /* Sportfinder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB31099422A7F58A005FCFBF /* Sportfinder.xcdatamodeld */; };
 		EB31099E22A7FF24005FCFBF /* Utilizador+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31099C22A7FF24005FCFBF /* Utilizador+CoreDataClass.swift */; };
 		EB31099F22A7FF24005FCFBF /* Utilizador+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31099D22A7FF24005FCFBF /* Utilizador+CoreDataProperties.swift */; };
 		EB58500C22A81810006A07B6 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB58500B22A81810006A07B6 /* Reachability.swift */; };
+		EB70ACD422AFFC01002675F0 /* MySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB70ACD322AFFC01002675F0 /* MySingleton.swift */; };
 		EB7CCF5822A6B4FA005A703A /* RankingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7CCF5722A6B4FA005A703A /* RankingController.swift */; };
 		EB7CCF5A22A6D0FD005A703A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7CCF5922A6D0FD005A703A /* User.swift */; };
 		EB7CCF5E22A6D767005A703A /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7CCF5D22A6D767005A703A /* MyTableViewCell.swift */; };
 		EBC578BB22A97034007A0293 /* UserProfileDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC578BA22A97034007A0293 /* UserProfileDetails.swift */; };
-        	1E05940422A0448F00ACAD9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E05940322A0448F00ACAD9E /* GoogleService-Info.plist */; };
-		1E05940422A0448F00ACAD9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E05940322A0448F00ACAD9E /* GoogleService-Info.plist */; };
-		1E0777F422A8363D005ED261 /* TableViewCellDesportos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0777F322A8363D005ED261 /* TableViewCellDesportos.swift */; };
-		1E15FE9B22A70EE400101A9E /* EntityReturnDesportos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E15FE9A22A70EE400101A9E /* EntityReturnDesportos.swift */; };
-		C51E5F2FE0B10AB58F1BE249 /* Pods_Sportfinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681AA3C85510C95F609FE8B6 /* Pods_Sportfinder.framework */; };
 		EF369EE6229EDF1300B6E21A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF369EE5229EDF1300B6E21A /* AppDelegate.swift */; };
 		EF369EEB229EDF1300B6E21A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF369EE9229EDF1300B6E21A /* Main.storyboard */; };
 		EF369EED229EDF1400B6E21A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF369EEC229EDF1400B6E21A /* Assets.xcassets */; };
@@ -48,20 +45,16 @@
 		2FB903156D2A27674691B110 /* Pods-Sportfinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sportfinder.release.xcconfig"; path = "Target Support Files/Pods-Sportfinder/Pods-Sportfinder.release.xcconfig"; sourceTree = "<group>"; };
 		681AA3C85510C95F609FE8B6 /* Pods_Sportfinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sportfinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB02070D22AF0E0F004AEBD6 /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
+		EB2F4AB222B01B3200A860AD /* ContaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContaController.swift; sourceTree = "<group>"; };
 		EB31099522A7F58A005FCFBF /* Sportfinder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sportfinder.xcdatamodel; sourceTree = "<group>"; };
 		EB31099C22A7FF24005FCFBF /* Utilizador+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utilizador+CoreDataClass.swift"; sourceTree = "<group>"; };
 		EB31099D22A7FF24005FCFBF /* Utilizador+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utilizador+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		EB58500B22A81810006A07B6 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		EB70ACD322AFFC01002675F0 /* MySingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySingleton.swift; sourceTree = "<group>"; };
 		EB7CCF5722A6B4FA005A703A /* RankingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingController.swift; sourceTree = "<group>"; };
 		EB7CCF5922A6D0FD005A703A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EB7CCF5D22A6D767005A703A /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		EBC578BA22A97034007A0293 /* UserProfileDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileDetails.swift; sourceTree = "<group>"; };
-        1E05940322A0448F00ACAD9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		1E05940322A0448F00ACAD9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		1E0777F322A8363D005ED261 /* TableViewCellDesportos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellDesportos.swift; sourceTree = "<group>"; };
-		1E15FE9A22A70EE400101A9E /* EntityReturnDesportos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityReturnDesportos.swift; sourceTree = "<group>"; };
-		2FB903156D2A27674691B110 /* Pods-Sportfinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sportfinder.release.xcconfig"; path = "Target Support Files/Pods-Sportfinder/Pods-Sportfinder.release.xcconfig"; sourceTree = "<group>"; };
-		681AA3C85510C95F609FE8B6 /* Pods_Sportfinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sportfinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF369EE2229EDF1300B6E21A /* Sportfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sportfinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF369EE5229EDF1300B6E21A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF369EEA229EDF1300B6E21A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,12 +137,13 @@
 				EF369EF9229F1A1500B6E21A /* CustomClass */,
 				EB31099B22A7F756005FCFBF /* CoreDataUser */,
 				EF369EE5229EDF1300B6E21A /* AppDelegate.swift */,
+				EF369EE9229EDF1300B6E21A /* Main.storyboard */,
 				EB58500B22A81810006A07B6 /* Reachability.swift */,
 				EB31099422A7F58A005FCFBF /* Sportfinder.xcdatamodeld */,
 				EF369EEE229EDF1400B6E21A /* LaunchScreen.storyboard */,
 				EF369EF1229EDF1400B6E21A /* Info.plist */,
 				EF369EEC229EDF1400B6E21A /* Assets.xcassets */,
-				EF369EE9229EDF1300B6E21A /* Main.storyboard */,
+				EB70ACD322AFFC01002675F0 /* MySingleton.swift */,
 				EF369F0D229F34E100B6E21A /* MainStoryboardControllers */,
 				EF369F00229F288500B6E21A /* PesquisarLocal */,
 				EF369F03229F310200B6E21A /* AdicionarLocal */,
@@ -230,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				EF369F12229F36A000B6E21A /* Conta.storyboard */,
+				EB2F4AB222B01B3200A860AD /* ContaController.swift */,
 			);
 			name = Conta;
 			sourceTree = "<group>";
@@ -357,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF369EFB229F1A3700B6E21A /* RoundView.swift in Sources */,
+				EB70ACD422AFFC01002675F0 /* MySingleton.swift in Sources */,
 				EB02070E22AF0E0F004AEBD6 /* Week.swift in Sources */,
 				EB31099622A7F58A005FCFBF /* Sportfinder.xcdatamodeld in Sources */,
 				EB58500C22A81810006A07B6 /* Reachability.swift in Sources */,
@@ -366,6 +362,7 @@
 				EF369EF8229EE3BD00B6E21A /* LoginViewController.swift in Sources */,
 				1E0777F422A8363D005ED261 /* TableViewCellDesportos.swift in Sources */,
 				EF369EE6229EDF1300B6E21A /* AppDelegate.swift in Sources */,
+				EB2F4AB322B01B3200A860AD /* ContaController.swift in Sources */,
 				EBC578BB22A97034007A0293 /* UserProfileDetails.swift in Sources */,
 				EB7CCF5822A6B4FA005A703A /* RankingController.swift in Sources */,
 				EB31099F22A7FF24005FCFBF /* Utilizador+CoreDataProperties.swift in Sources */,

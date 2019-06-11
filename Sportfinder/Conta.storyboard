@@ -10,32 +10,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Conta Controller-->
         <scene sceneID="jNH-m1-t2A">
             <objects>
-                <viewController storyboardIdentifier="contaStoryBoard" id="tZV-cM-cJf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="contaStoryBoard" id="tZV-cM-cJf" customClass="ContaController" customModule="Sportfinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iTA-a7-mJi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0HT-5Z-atg">
-                                <rect key="frame" x="164.5" y="323" width="46" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtp-sL-C9r">
+                                <rect key="frame" x="83" y="303" width="209" height="61"/>
+                                <state key="normal" title="Terminar Sessao"/>
+                                <connections>
+                                    <action selector="btnLogout:" destination="tZV-cM-cJf" eventType="touchUpInside" id="D28-ZC-ReE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0HT-5Z-atg" firstAttribute="centerX" secondItem="iTA-a7-mJi" secondAttribute="centerX" id="1ZU-cJ-Zay"/>
-                            <constraint firstItem="0HT-5Z-atg" firstAttribute="centerY" secondItem="iTA-a7-mJi" secondAttribute="centerY" id="evd-oA-kiG"/>
+                            <constraint firstItem="qtp-sL-C9r" firstAttribute="centerX" secondItem="iTA-a7-mJi" secondAttribute="centerX" id="EPz-n8-F2B"/>
+                            <constraint firstItem="qtp-sL-C9r" firstAttribute="leading" secondItem="fzb-5O-LxM" secondAttribute="leading" constant="164" id="mXg-GA-Tiy"/>
+                            <constraint firstItem="qtp-sL-C9r" firstAttribute="top" secondItem="fzb-5O-LxM" secondAttribute="top" constant="298" id="tG9-PY-rUI"/>
+                            <constraint firstItem="qtp-sL-C9r" firstAttribute="centerY" secondItem="iTA-a7-mJi" secondAttribute="centerY" id="yN4-NE-Ka3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fzb-5O-LxM"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o1G-Ma-qnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-104" y="102"/>
+            <point key="canvasLocation" x="-104.8" y="101.19940029985008"/>
         </scene>
     </scenes>
 </document>
