@@ -213,9 +213,9 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
             }
         }
         
-        for des in arrayDesportosId {
+        /*for des in arrayDesportosId {
             print ("pedro123 " + des)
-        }
+        }*/
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

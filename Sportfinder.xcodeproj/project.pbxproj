@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E05940422A0448F00ACAD9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E05940322A0448F00ACAD9E /* GoogleService-Info.plist */; };
+		1E06000122B0164F002A19EF /* JsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06000022B0164F002A19EF /* JsonData.swift */; };
 		1E0777F422A8363D005ED261 /* TableViewCellDesportos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0777F322A8363D005ED261 /* TableViewCellDesportos.swift */; };
 		1E0A8EDA22AEEEB6004B8B9A /* VCParquesFiltrados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0A8ED922AEEEB6004B8B9A /* VCParquesFiltrados.swift */; };
 		1E15FE9B22A70EE400101A9E /* EntityReturnDesportos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E15FE9A22A70EE400101A9E /* EntityReturnDesportos.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		1E05940322A0448F00ACAD9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1E06000022B0164F002A19EF /* JsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
 		1E0777F322A8363D005ED261 /* TableViewCellDesportos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellDesportos.swift; sourceTree = "<group>"; };
 		1E0A8ED922AEEEB6004B8B9A /* VCParquesFiltrados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCParquesFiltrados.swift; sourceTree = "<group>"; };
 		1E15FE9A22A70EE400101A9E /* EntityReturnDesportos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityReturnDesportos.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				1E15FE9A22A70EE400101A9E /* EntityReturnDesportos.swift */,
 				1E0777F322A8363D005ED261 /* TableViewCellDesportos.swift */,
 				1E0A8ED922AEEEB6004B8B9A /* VCParquesFiltrados.swift */,
+				1E06000022B0164F002A19EF /* JsonData.swift */,
 			);
 			name = PesquisarLocal;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				EF369EFB229F1A3700B6E21A /* RoundView.swift in Sources */,
 				EF369F02229F28AB00B6E21A /* SelecionarDesportoViewController.swift in Sources */,
 				EF369EF8229EE3BD00B6E21A /* LoginViewController.swift in Sources */,
+				1E06000122B0164F002A19EF /* JsonData.swift in Sources */,
 				1E0777F422A8363D005ED261 /* TableViewCellDesportos.swift in Sources */,
 				EF369EE6229EDF1300B6E21A /* AppDelegate.swift in Sources */,
 				1E0A8EDA22AEEEB6004B8B9A /* VCParquesFiltrados.swift in Sources */,
