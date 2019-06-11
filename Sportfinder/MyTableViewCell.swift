@@ -13,6 +13,7 @@ class MyTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        imgFirstPlaceIcon.image = UIImage(named: "firstPlace")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -23,4 +24,6 @@ class MyTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblUserName: UILabel!
     @IBOutlet weak var lblpontuacao: UILabel!
+    @IBOutlet weak var lblPosicao: UILabel!
+    @IBOutlet weak var imgFirstPlaceIcon: UIImageView!
 }
