@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIU-EY-E33">
-                                <rect key="frame" x="20" y="420" width="335" height="40"/>
+                                <rect key="frame" x="20" y="478" width="335" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="krj-lc-FFd"/>
@@ -38,8 +38,8 @@
                                     <action selector="btnLogin:" destination="56Y-gU-9CZ" eventType="touchUpInside" id="f9M-yc-hf9"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YZW-pI-84J">
-                                <rect key="frame" x="20" y="320" width="335" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EmailChange" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YZW-pI-84J">
+                                <rect key="frame" x="20" y="378" width="335" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="s4r-0K-zu3"/>
                                 </constraints>
@@ -48,7 +48,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zbp-bW-Bgb">
-                                <rect key="frame" x="20" y="370" width="335" height="40"/>
+                                <rect key="frame" x="20" y="428" width="335" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="aLc-oo-YZQ"/>
                                 </constraints>
@@ -57,7 +57,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSU-Tk-BB6">
-                                <rect key="frame" x="100" y="475" width="175" height="20"/>
+                                <rect key="frame" x="100" y="533" width="175" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="asU-VV-d8G"/>
                                 </constraints>
@@ -67,13 +67,13 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0g-xe-Nfa">
-                                <rect key="frame" x="101" y="500" width="173" height="30"/>
+                                <rect key="frame" x="101" y="558" width="173" height="30"/>
                                 <state key="normal" title="Esqueci-me da Password">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ai-yR-ZEp">
-                                <rect key="frame" x="20" y="280" width="335" height="30"/>
+                                <rect key="frame" x="20" y="338" width="335" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="qI4-11-Mwj"/>
                                 </constraints>
@@ -81,6 +81,12 @@
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sportfinder_text" translatesAutoresizingMaskIntoConstraints="NO" id="WLL-dd-RMH">
+                                <rect key="frame" x="69.5" y="301.5" width="236" height="46.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sportfinder_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Q4C-GW-b9b">
+                                <rect key="frame" x="110" y="106" width="195" height="185.5"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.36078431372549019" green="0.85882352941176465" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -89,6 +95,10 @@
                             <constraint firstItem="V0g-xe-Nfa" firstAttribute="top" secondItem="PSU-Tk-BB6" secondAttribute="bottom" constant="5" id="D3N-G8-V9h"/>
                             <constraint firstItem="6ai-yR-ZEp" firstAttribute="trailing" secondItem="YZW-pI-84J" secondAttribute="trailing" id="TlK-X0-0nS"/>
                             <constraint firstItem="YZW-pI-84J" firstAttribute="top" secondItem="XGV-V3-IQ8" secondAttribute="top" constant="300" id="Tsb-if-oZY"/>
+                            <constraint firstItem="WLL-dd-RMH" firstAttribute="top" secondItem="Q4C-GW-b9b" secondAttribute="bottom" constant="10" id="IVJ-2X-mjc"/>
+                            <constraint firstItem="XGV-V3-IQ8" firstAttribute="trailing" secondItem="Q4C-GW-b9b" secondAttribute="trailing" constant="70" id="QMe-Do-EYQ"/>
+                            <constraint firstItem="6ai-yR-ZEp" firstAttribute="trailing" secondItem="YZW-pI-84J" secondAttribute="trailing" id="TlK-X0-0nS"/>
+                            <constraint firstItem="YZW-pI-84J" firstAttribute="top" secondItem="WLL-dd-RMH" secondAttribute="bottom" constant="30" id="Uio-Rq-DHe"/>
                             <constraint firstItem="YZW-pI-84J" firstAttribute="top" secondItem="6ai-yR-ZEp" secondAttribute="bottom" constant="10" id="VS1-Cy-AcJ"/>
                             <constraint firstItem="YZW-pI-84J" firstAttribute="leading" secondItem="XGV-V3-IQ8" secondAttribute="leading" constant="20" id="Vc5-4L-Lp8"/>
                             <constraint firstItem="PSU-Tk-BB6" firstAttribute="top" secondItem="BIU-EY-E33" secondAttribute="bottom" constant="15" id="XAn-WM-Vdd"/>
@@ -100,6 +110,15 @@
                             <constraint firstItem="BIU-EY-E33" firstAttribute="leading" secondItem="zbp-bW-Bgb" secondAttribute="leading" id="s4a-bO-mMo"/>
                             <constraint firstItem="zbp-bW-Bgb" firstAttribute="top" secondItem="YZW-pI-84J" secondAttribute="bottom" constant="10" id="uzR-Ay-ukH"/>
                             <constraint firstItem="BIU-EY-E33" firstAttribute="top" secondItem="zbp-bW-Bgb" secondAttribute="bottom" constant="10" id="veE-bI-fvh"/>
+                            <constraint firstItem="Q4C-GW-b9b" firstAttribute="leading" secondItem="XGV-V3-IQ8" secondAttribute="leading" constant="110" id="bEY-2Y-hFd"/>
+                            <constraint firstItem="BIU-EY-E33" firstAttribute="trailing" secondItem="zbp-bW-Bgb" secondAttribute="trailing" id="bln-bp-AAw"/>
+                            <constraint firstItem="PSU-Tk-BB6" firstAttribute="leading" secondItem="XGV-V3-IQ8" secondAttribute="leading" constant="100" id="gbA-Fv-3du"/>
+                            <constraint firstItem="XGV-V3-IQ8" firstAttribute="trailing" secondItem="YZW-pI-84J" secondAttribute="trailing" constant="20" id="nEv-vD-6cR"/>
+                            <constraint firstItem="Q4C-GW-b9b" firstAttribute="top" secondItem="XGV-V3-IQ8" secondAttribute="top" constant="86" id="nX1-Eb-7ya"/>
+                            <constraint firstItem="BIU-EY-E33" firstAttribute="leading" secondItem="zbp-bW-Bgb" secondAttribute="leading" id="s4a-bO-mMo"/>
+                            <constraint firstItem="zbp-bW-Bgb" firstAttribute="top" secondItem="YZW-pI-84J" secondAttribute="bottom" constant="10" id="uzR-Ay-ukH"/>
+                            <constraint firstItem="BIU-EY-E33" firstAttribute="top" secondItem="zbp-bW-Bgb" secondAttribute="bottom" constant="10" id="veE-bI-fvh"/>
+                            <constraint firstItem="WLL-dd-RMH" firstAttribute="centerX" secondItem="lgo-A5-xw4" secondAttribute="centerX" id="vvq-la-MlK"/>
                             <constraint firstItem="zbp-bW-Bgb" firstAttribute="leading" secondItem="YZW-pI-84J" secondAttribute="leading" id="xA4-Wk-DIj"/>
                             <constraint firstItem="6ai-yR-ZEp" firstAttribute="leading" secondItem="YZW-pI-84J" secondAttribute="leading" id="yOo-8D-hBP"/>
                         </constraints>
@@ -114,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nCI-km-9qK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="193" y="-28"/>
+            <point key="canvasLocation" x="192.80000000000001" y="-28.335832083958024"/>
         </scene>
         <!--SportFinder-->
         <scene sceneID="X6C-YL-M7v">
@@ -585,5 +604,7 @@
         <image name="history" width="50" height="50"/>
         <image name="ranking" width="50" height="50"/>
         <image name="search" width="50" height="50"/>
+        <image name="sportfinder_logo" width="214.66667175292969" height="185.33332824707031"/>
+        <image name="sportfinder_text" width="236.33332824707031" height="46.666667938232422"/>
     </resources>
 </document>
