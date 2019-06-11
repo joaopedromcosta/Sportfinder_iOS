@@ -524,7 +524,7 @@
                 <viewControllerPlaceholder storyboardName="PesquisarLocal" referencedIdentifier="pesquisarLocalStoryBoard" id="tZg-C5-upg" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vqs-bR-Cso" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2594" y="-114"/>
+            <point key="canvasLocation" x="2583" y="-114"/>
         </scene>
         <!--adicionarLocalStoryBoard-->
         <scene sceneID="xKf-qk-OXR">
