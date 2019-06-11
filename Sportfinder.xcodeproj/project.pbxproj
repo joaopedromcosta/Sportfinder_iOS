@@ -12,6 +12,8 @@
 		1E0777F422A8363D005ED261 /* TableViewCellDesportos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0777F322A8363D005ED261 /* TableViewCellDesportos.swift */; };
 		1E0A8EDA22AEEEB6004B8B9A /* VCParquesFiltrados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0A8ED922AEEEB6004B8B9A /* VCParquesFiltrados.swift */; };
 		1E15FE9B22A70EE400101A9E /* EntityReturnDesportos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E15FE9A22A70EE400101A9E /* EntityReturnDesportos.swift */; };
+		1E2348E322B05823005DED42 /* EntityReturnDataLocais.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2348E222B05823005DED42 /* EntityReturnDataLocais.swift */; };
+		1E2348E522B05917005DED42 /* TableViewCellLocais.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2348E422B05917005DED42 /* TableViewCellLocais.swift */; };
 		C51E5F2FE0B10AB58F1BE249 /* Pods_Sportfinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681AA3C85510C95F609FE8B6 /* Pods_Sportfinder.framework */; };
 		EF369EE6229EDF1300B6E21A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF369EE5229EDF1300B6E21A /* AppDelegate.swift */; };
 		EF369EEB229EDF1300B6E21A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF369EE9229EDF1300B6E21A /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 		1E0777F322A8363D005ED261 /* TableViewCellDesportos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellDesportos.swift; sourceTree = "<group>"; };
 		1E0A8ED922AEEEB6004B8B9A /* VCParquesFiltrados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCParquesFiltrados.swift; sourceTree = "<group>"; };
 		1E15FE9A22A70EE400101A9E /* EntityReturnDesportos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityReturnDesportos.swift; sourceTree = "<group>"; };
+		1E2348E222B05823005DED42 /* EntityReturnDataLocais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityReturnDataLocais.swift; sourceTree = "<group>"; };
+		1E2348E422B05917005DED42 /* TableViewCellLocais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellLocais.swift; sourceTree = "<group>"; };
 		2FB903156D2A27674691B110 /* Pods-Sportfinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sportfinder.release.xcconfig"; path = "Target Support Files/Pods-Sportfinder/Pods-Sportfinder.release.xcconfig"; sourceTree = "<group>"; };
 		681AA3C85510C95F609FE8B6 /* Pods_Sportfinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sportfinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF369EE2229EDF1300B6E21A /* Sportfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sportfinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +145,8 @@
 				1E0777F322A8363D005ED261 /* TableViewCellDesportos.swift */,
 				1E0A8ED922AEEEB6004B8B9A /* VCParquesFiltrados.swift */,
 				1E06000022B0164F002A19EF /* JsonData.swift */,
+				1E2348E222B05823005DED42 /* EntityReturnDataLocais.swift */,
+				1E2348E422B05917005DED42 /* TableViewCellLocais.swift */,
 			);
 			name = PesquisarLocal;
 			sourceTree = "<group>";
@@ -321,8 +327,10 @@
 				EF369EF8229EE3BD00B6E21A /* LoginViewController.swift in Sources */,
 				1E06000122B0164F002A19EF /* JsonData.swift in Sources */,
 				1E0777F422A8363D005ED261 /* TableViewCellDesportos.swift in Sources */,
+				1E2348E322B05823005DED42 /* EntityReturnDataLocais.swift in Sources */,
 				EF369EE6229EDF1300B6E21A /* AppDelegate.swift in Sources */,
 				1E0A8EDA22AEEEB6004B8B9A /* VCParquesFiltrados.swift in Sources */,
+				1E2348E522B05917005DED42 /* TableViewCellLocais.swift in Sources */,
 				1E15FE9B22A70EE400101A9E /* EntityReturnDesportos.swift in Sources */,
 				EF369EFD229F1EEB00B6E21A /* MenuViewController.swift in Sources */,
 			);

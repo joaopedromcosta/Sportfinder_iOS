@@ -60,7 +60,6 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
             
             guard let data = data else { return }
             
-            
             DispatchQueue.main.async {
                 do{
                     let response = try JSONDecoder().decode([EntityReturnDesportos].self, from: data)

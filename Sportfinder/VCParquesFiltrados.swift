@@ -8,15 +8,21 @@
 
 import UIKit
 
-class VCParquesFiltrados: UIViewController {
+class VCParquesFiltrados: UIViewController, UITableViewDelegate, UITableViewDataSource {
+  
+    
+    var arrayDataLocais = [EntityReturnDataLocais]()
     var lat = "41.692640"
     var lng = "-8.847505"
     var arrayIdDesporto:[String] =  [""]
     var arrayIdAux = [Sport]()
     
+    @IBOutlet var tvLocais: UITableView!
+    
     override func viewDidLoad() {
         construirJSON()
         getLocais()
+        self.tvLocais.rowHeight = 150.0
         
     }
     
@@ -47,33 +53,49 @@ class VCParquesFiltrados: UIViewController {
         }catch {
             print("Erro na preparação dos dados")
         }
-        let task = URLSession.shared.dataTask(with: request) { (data, response, err) in
+        
+        URLSession.shared.dataTask(with: request) { (data, response, err) in
             
             //Check for errors
             if(err != nil){
                 print("Error in request: \(String(describing: err))")
             }
-            //check for status 200 ok
-            if let httpresponse = response as? HTTPURLResponse {
-                if httpresponse.statusCode != 200{
-                    print("Bad request!")
-                    return
-                }else{
-                    print("Request status code: \(httpresponse.statusCode)")
+            
+            guard let data = data else { return }
+            
+            DispatchQueue.main.async {
+                do{
+                    let response = try JSONDecoder().decode([EntityReturnDataLocais].self, from: data)
+                    for l in response {
+                        print("-------Pedro")
+                        print(l)
+                        print("-------Pedro")
+                        self.arrayDataLocais.append(l)
+                    }
+                    print("reloading data...")
+                     self.tvLocais.reloadData()
+                } catch let jsonError {
+                    print(jsonError)
                 }
+               
             }
-            var aux = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            print(aux)
-            //Executar mudanca na BD
-            //FavoritosCell.delete(id: id_local, appDel: self.delegate!)
-            //self.loadLocaisFromCoreData()
-            //
-            //let alert = UIAlertController(title: "Favorito Removido", message: "Local removido dos favoritos", preferredStyle: .alert)
-            //alert.addAction(UIAlertAction(title: "Fechar", style: .default, handler: nil))
-            //self.present(alert,animated: true)
-        }
-        task.resume()
+        }.resume()
     }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayDataLocais.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellLocal", for: indexPath) as! TableViewCellLocais
+        let ec:EntityReturnDataLocais = arrayDataLocais[indexPath.row] as! EntityReturnDataLocais
+        
+        cell.lblNomeLocal.text = ec.nome
+        
+        return cell
+    }
+    
     
     
 }
