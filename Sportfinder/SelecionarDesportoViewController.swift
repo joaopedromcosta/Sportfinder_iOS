@@ -9,7 +9,11 @@
 
 import UIKit
 
-class SelecionarDesportoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
+class SelecionarDesportoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate, CellDesportoDelegate{
+    func didClickInDesportoCell(nomeDesporto: String, selecionou: Bool) {
+        arraYDesportosSelected.append(nomeDesporto)
+    }
+    
     
     
     //MARK:outlet
@@ -104,6 +108,8 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         
         cell.tvNomeDesporto.text = ec.nome
         cell.IVIconDesporto.image = UIImage(named: "football_ball")
+        cell.setDesportoNome(nome: ec.nome)
+        cell.delegate = self
         /*
         for c in arraYDesportosSelected {
             print("pedrosec" + c)
@@ -138,7 +144,7 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         return 20
     }*/
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+   /* func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
        /* UITableViewCell *cell = (UITableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
         cell.contentView.backgroundColor = [UIColor yellowColor];*/
         
@@ -176,7 +182,7 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         //printSelect()
         //verificarDesportoSelecionado(nomeDesporto: arrayDesportos[indexPath.row].nome)
     }
-    
+    */
     //searchbar
     override func viewWillAppear(_ animated: Bool) {
         let searchController = UISearchController(searchResultsController: nil)
@@ -240,14 +246,14 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
     }
     
     func hasConnectivity() -> Bool {
-        if Reachability.isConnectedToNetwork(){
+        /*if Reachability.isConnectedToNetwork(){
             print("Internet Connection Available!")
             return true
         }else{
             print("Internet Connection not Available!")
             return false
-        }
+        }*/
+        return true
     }
     
 }
-
