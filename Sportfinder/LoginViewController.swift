@@ -86,6 +86,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                             //let response = try JSONDecoder().decode([String].self, from: data)
                             let responseString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
                             GlobalVariables.loggedUserId = responseString! as String
+                            UserDefaults.standard.set(GlobalVariables.loggedUserId, forKey: "userID")
+                            UserDefaults.standard.synchronize()
                             self.performSegue(withIdentifier: "menuPrincipal", sender: self)
                         } catch let jsonError{
                             print(jsonError)

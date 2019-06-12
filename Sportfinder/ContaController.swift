@@ -18,7 +18,9 @@ class ContaController: UIViewController{
     
     @IBAction func btnLogout(_ sender: Any) {
         try! Auth.auth().signOut()
-        
+        //Destroy UserDefaults and MySingleton Data
+        UserDefaults.standard.set("", forKey: "userName")
+        UserDefaults.standard.synchronize()
         DispatchQueue.main.async {
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             
