@@ -53,18 +53,24 @@ class FavoritosTableViewController: UITableViewController, UISearchBarDelegate{
 }
 extension FavoritosTableViewController: FavoritosTableViewCellDelegate{
     func didClickRemoveFavorito(id_local: String, nome_local:String) {
-        let alert = UIAlertController(title: "Remover Favorito", message: "De certeza que pretende remover '\(nome_local)' dos favorito?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Sim", style: .destructive, handler: { action in
-            print("Remover favorito")
-            //Add to favoritos or remove from there
-            //
-            //Chamar WS
-            self.removerFavorito(id_user: self.userID, id_local: id_local)
-        }))
-        alert.addAction(UIAlertAction(title: "Não", style: .default, handler: { action in
-            print("Stoping changing favorito")
-        }))
-        self.present(alert, animated: true, completion: nil)
+        if !hasConnectivity() {
+            let alert = UIAlertController(title: "Sem Conexão Internet", message: "Conecte-se à internet para remover o favorito", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Fechar", style: .default, handler: nil))
+            present(alert,animated: true)
+        }else{
+            let alert = UIAlertController(title: "Remover Favorito", message: "De certeza que pretende remover '\(nome_local)' dos favorito?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Sim", style: .destructive, handler: { action in
+                print("Remover favorito")
+                //Add to favoritos or remove from there
+                //
+                //Chamar WS
+                self.removerFavorito(id_user: self.userID, id_local: id_local)
+            }))
+            alert.addAction(UIAlertAction(title: "Não", style: .default, handler: { action in
+                print("Stoping changing favorito")
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     func filterTable(searchText: String){
         locaisArrayFiltrados.removeAll()
