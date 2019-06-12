@@ -18,6 +18,8 @@ class VCParquesFiltrados: UIViewController, UITableViewDelegate, UITableViewData
     var arrayIdDesporto:[String] =  [""]
     var arrayIdAux = [Sport]()
     
+    var idLocalSelecionado = ""
+    
     @IBOutlet var tvLocais: UITableView!
     
     override func viewDidLoad() {
@@ -95,6 +97,7 @@ class VCParquesFiltrados: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.lblNomeLocal.text = ec.nome
         cell.lblDistancia.text = String(Int(ec.distancia))+" m"
+        cell.lblAvaliacao.text =  ec.avalicao
         let url = URL(string: "https://sportfinderapi.000webhostapp.com/img/compressed/" + ec.urlfotolocal + ".png")
         let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
         cell.IVFotoLocal.image = UIImage(data: data!)
@@ -114,6 +117,11 @@ class VCParquesFiltrados: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("id: " + arrayDataLocais[indexPath.row].nome)
+        idLocalSelecionado = arrayDataLocais[indexPath.row].id
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filtrarTableLocais(searchText: searchText)
     }
@@ -131,6 +139,9 @@ class VCParquesFiltrados: UIViewController, UITableViewDelegate, UITableViewData
         }
         tvLocais.reloadData()
     }
+    
+    
+    
     
 }
 struct JSONData: Codable {

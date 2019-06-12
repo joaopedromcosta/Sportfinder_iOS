@@ -164,29 +164,41 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wT4-S3-2Gg">
-                                                            <rect key="frame" x="245" y="83" width="42" height="21"/>
+                                                            <rect key="frame" x="245" y="71" width="42" height="15"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.6470588235294118" green="0.6470588235294118" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="avali" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ8-el-YRx">
-                                                            <rect key="frame" x="125" y="83" width="34" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ8-el-YRx">
+                                                            <rect key="frame" x="145" y="71" width="11" height="15"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.6470588235294118" green="0.6470588235294118" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favorites_star" translatesAutoresizingMaskIntoConstraints="NO" id="CCI-fc-k0m">
+                                                            <rect key="frame" x="125" y="71" width="15" height="15"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="15" id="PXL-ud-r0A"/>
+                                                                <constraint firstAttribute="height" constant="15" id="Z89-AA-LxR"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="0LW-7P-5BB" firstAttribute="leading" secondItem="Wmf-fQ-bnR" secondAttribute="trailing" constant="15" id="0Tn-rE-gcB"/>
                                                         <constraint firstAttribute="trailing" secondItem="0LW-7P-5BB" secondAttribute="trailing" constant="20" id="20w-Uf-5UO"/>
                                                         <constraint firstAttribute="height" constant="140" id="64k-A7-9cQ"/>
-                                                        <constraint firstItem="ZZ8-el-YRx" firstAttribute="leading" secondItem="Wmf-fQ-bnR" secondAttribute="trailing" constant="15" id="FZv-GM-Ifk"/>
-                                                        <constraint firstItem="wT4-S3-2Gg" firstAttribute="top" secondItem="ZZ8-el-YRx" secondAttribute="top" id="LKG-6C-4yQ"/>
-                                                        <constraint firstItem="wT4-S3-2Gg" firstAttribute="leading" secondItem="ZZ8-el-YRx" secondAttribute="trailing" constant="86" id="UrZ-cX-EMe"/>
+                                                        <constraint firstItem="CCI-fc-k0m" firstAttribute="top" secondItem="0LW-7P-5BB" secondAttribute="bottom" constant="20" id="8Lz-MN-EPX"/>
+                                                        <constraint firstItem="ZZ8-el-YRx" firstAttribute="top" secondItem="CCI-fc-k0m" secondAttribute="top" id="BGR-F5-Tw2"/>
+                                                        <constraint firstItem="wT4-S3-2Gg" firstAttribute="top" secondItem="ZZ8-el-YRx" secondAttribute="top" id="KCz-97-PKW"/>
+                                                        <constraint firstItem="CCI-fc-k0m" firstAttribute="leading" secondItem="0LW-7P-5BB" secondAttribute="leading" id="QOf-CF-SE4"/>
                                                         <constraint firstItem="Wmf-fQ-bnR" firstAttribute="leading" secondItem="Mdb-0Q-isP" secondAttribute="leading" constant="10" id="WaY-ck-f8K"/>
+                                                        <constraint firstItem="wT4-S3-2Gg" firstAttribute="bottom" secondItem="ZZ8-el-YRx" secondAttribute="bottom" id="bcX-Ma-XL7"/>
+                                                        <constraint firstItem="ZZ8-el-YRx" firstAttribute="leading" secondItem="CCI-fc-k0m" secondAttribute="trailing" id="eIA-OC-qJ2"/>
                                                         <constraint firstItem="0LW-7P-5BB" firstAttribute="top" secondItem="Wmf-fQ-bnR" secondAttribute="top" constant="10" id="fuX-QV-zAI"/>
-                                                        <constraint firstItem="ZZ8-el-YRx" firstAttribute="top" secondItem="0LW-7P-5BB" secondAttribute="bottom" constant="32" id="t0T-7b-hKC"/>
+                                                        <constraint firstItem="ZZ8-el-YRx" firstAttribute="leading" secondItem="CCI-fc-k0m" secondAttribute="trailing" constant="5" id="jAu-CI-TSW"/>
+                                                        <constraint firstItem="ZZ8-el-YRx" firstAttribute="bottom" secondItem="CCI-fc-k0m" secondAttribute="bottom" id="o1k-8g-GpA"/>
+                                                        <constraint firstItem="wT4-S3-2Gg" firstAttribute="leading" secondItem="ZZ8-el-YRx" secondAttribute="trailing" constant="89" id="sYd-NL-x4U"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -236,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Si-iH-qYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2049" y="167"/>
+            <point key="canvasLocation" x="2048.8000000000002" y="166.8665667166417"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="75Q-51-sG1">
@@ -257,4 +269,7 @@
             <point key="canvasLocation" x="90.400000000000006" y="166.8665667166417"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="favorites_star" width="30" height="30"/>
+    </resources>
 </document>

@@ -98,10 +98,6 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        /*let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
-        cell.textLabel?.text = arrayDesportos[indexPath.row].nome
-        cell.detailTextLabel?.text = "info"
-        return cell*/
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellDesporto", for: indexPath) as! TableViewCellDesportos
         let ec:EntityReturnDesportos = arrayDesportos[indexPath.row]
@@ -110,24 +106,7 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         cell.IVIconDesporto.image = UIImage(named: "football_ball")
         cell.setDesportoNome(nome: ec.nome)
         cell.delegate = self
-        /*
-        for c in arraYDesportosSelected {
-            print("pedrosec" + c)
-        }
-    
         
-        if(arraYDesportosSelected.count == 0) {
-            cell.backgroundColor = UIColor.white
-        }else {
-            for d in arraYDesportosSelected {
-                if ( ec.nome == d ) {
-                    //cell.backgroundColor = UIColor(red:185/255.0, green:253/255.0, blue:216/255.0, alpha: 0.5)
-                }else {
-                    //cell.backgroundColor = UIColor.white
-                }
-            }
-        }
-        */
         return cell
     }
     
@@ -246,14 +225,13 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
     }
     
     func hasConnectivity() -> Bool {
-        /*if Reachability.isConnectedToNetwork(){
+        if Reachability.isConnectedToNetwork(){
             print("Internet Connection Available!")
             return true
         }else{
             print("Internet Connection not Available!")
             return false
-        }*/
-        return true
+        }
     }
     
 }
