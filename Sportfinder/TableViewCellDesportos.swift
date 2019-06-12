@@ -26,7 +26,7 @@ class TableViewCellDesportos: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    override var frame: CGRect {
+    /*override var frame: CGRect {
         get {
             return super.frame
         }
@@ -41,7 +41,7 @@ class TableViewCellDesportos: UITableViewCell {
             
         }
     }
-    
+    */
     
     
     

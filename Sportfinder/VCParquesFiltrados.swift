@@ -8,10 +8,11 @@
 
 import UIKit
 
-class VCParquesFiltrados: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class VCParquesFiltrados: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
   
     
     var arrayDataLocais = [EntityReturnDataLocais]()
+    var filteredArrayLocais = [EntityReturnDataLocais]()
     var lat = "41.692640"
     var lng = "-8.847505"
     var arrayIdDesporto:[String] =  [""]
@@ -72,6 +73,7 @@ class VCParquesFiltrados: UIViewController, UITableViewDelegate, UITableViewData
                         print("-------Pedro")
                         self.arrayDataLocais.append(l)
                     }
+                    self.filteredArrayLocais =  self.arrayDataLocais
                     print("reloading data...")
                      self.tvLocais.reloadData()
                 } catch let jsonError {
@@ -81,7 +83,7 @@ class VCParquesFiltrados: UIViewController, UITableViewDelegate, UITableViewData
             }
         }.resume()
     }
-    
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayDataLocais.count
@@ -92,11 +94,43 @@ class VCParquesFiltrados: UIViewController, UITableViewDelegate, UITableViewData
         let ec:EntityReturnDataLocais = arrayDataLocais[indexPath.row] as! EntityReturnDataLocais
         
         cell.lblNomeLocal.text = ec.nome
+        cell.lblDistancia.text = String(Int(ec.distancia))+" m"
+        let url = URL(string: "https://sportfinderapi.000webhostapp.com/img/compressed/" + ec.urlfotolocal + ".png")
+        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        cell.IVFotoLocal.image = UIImage(data: data!)
         
         return cell
     }
     
+    //searchbar
+    override func viewWillAppear(_ animated: Bool) {
+        let searchController = UISearchController(searchResultsController: nil)
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.placeholder =  "Pesquisar"
+        searchController.searchBar.enablesReturnKeyAutomatically = true
+        searchController.searchBar.barTintColor =  UIColor.white
+        searchController.searchBar.delegate = self
+        
+    }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filtrarTableLocais(searchText: searchText)
+    }
+    
+    func filtrarTableLocais(searchText: String){
+        arrayDataLocais.removeAll()
+        if(searchText.isEmpty){
+            arrayDataLocais.append(contentsOf: filteredArrayLocais)
+        } else {
+            for d in filteredArrayLocais {
+                if d.nome.lowercased().contains(searchText.lowercased()) {
+                    arrayDataLocais.append(d)
+                }
+            }
+        }
+        tvLocais.reloadData()
+    }
     
 }
 struct JSONData: Codable {
