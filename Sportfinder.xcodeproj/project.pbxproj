@@ -14,6 +14,9 @@
 		1E15FE9B22A70EE400101A9E /* EntityReturnDesportos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E15FE9A22A70EE400101A9E /* EntityReturnDesportos.swift */; };
 		1E2348E322B05823005DED42 /* EntityReturnDataLocais.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2348E222B05823005DED42 /* EntityReturnDataLocais.swift */; };
 		1E2348E522B05917005DED42 /* TableViewCellLocais.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2348E422B05917005DED42 /* TableViewCellLocais.swift */; };
+		4B0AE7CF22AEB2B3006A2B0C /* DetalhesLocal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B0AE7CE22AEB2B3006A2B0C /* DetalhesLocal.storyboard */; };
+		4B0AE7D122AEB411006A2B0C /* DetalhesLocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0AE7D022AEB411006A2B0C /* DetalhesLocalViewController.swift */; };
+		4B9F617E22B06B19008098EF /* EntityLocalDetalhes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9F617D22B06B19008098EF /* EntityLocalDetalhes.swift */; };
 		C51E5F2FE0B10AB58F1BE249 /* Pods_Sportfinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681AA3C85510C95F609FE8B6 /* Pods_Sportfinder.framework */; };
 		EB02070E22AF0E0F004AEBD6 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB02070D22AF0E0F004AEBD6 /* Week.swift */; };
 		EB2F4AB322B01B3200A860AD /* ContaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F4AB222B01B3200A860AD /* ContaController.swift */; };
@@ -59,6 +62,9 @@
 		1E2348E222B05823005DED42 /* EntityReturnDataLocais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityReturnDataLocais.swift; sourceTree = "<group>"; };
 		1E2348E422B05917005DED42 /* TableViewCellLocais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellLocais.swift; sourceTree = "<group>"; };
 		2FB903156D2A27674691B110 /* Pods-Sportfinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sportfinder.release.xcconfig"; path = "Target Support Files/Pods-Sportfinder/Pods-Sportfinder.release.xcconfig"; sourceTree = "<group>"; };
+		4B0AE7CE22AEB2B3006A2B0C /* DetalhesLocal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetalhesLocal.storyboard; sourceTree = "<group>"; };
+		4B0AE7D022AEB411006A2B0C /* DetalhesLocalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesLocalViewController.swift; sourceTree = "<group>"; };
+		4B9F617D22B06B19008098EF /* EntityLocalDetalhes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityLocalDetalhes.swift; sourceTree = "<group>"; };
 		681AA3C85510C95F609FE8B6 /* Pods_Sportfinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sportfinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB02070D22AF0E0F004AEBD6 /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
 		EB2F4AB222B01B3200A860AD /* ContaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContaController.swift; sourceTree = "<group>"; };
@@ -118,11 +124,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4B0AE7CD22AEB260006A2B0C /* DetalhesLocal */ = {
+			isa = PBXGroup;
+			children = (
+				4B0AE7CE22AEB2B3006A2B0C /* DetalhesLocal.storyboard */,
+				4B0AE7D022AEB411006A2B0C /* DetalhesLocalViewController.swift */,
+				4B9F617D22B06B19008098EF /* EntityLocalDetalhes.swift */,
+			);
+			name = DetalhesLocal;
+			sourceTree = "<group>";
+		};
+		4B9F617C22B06AAD008098EF /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				EF281F2A22B003810034FB66 /* FavoritosCell+CoreDataProperties.swift */,
+				EF281F2B22B003820034FB66 /* FavoritosCell+CoreDataClass.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		EB31099B22A7F756005FCFBF /* CoreDataUser */ = {
 			isa = PBXGroup;
 			children = (
-				EF281F2B22B003820034FB66 /* FavoritosCell+CoreDataClass.swift */,
-				EF281F2A22B003810034FB66 /* FavoritosCell+CoreDataProperties.swift */,
 				EB31099C22A7FF24005FCFBF /* Utilizador+CoreDataClass.swift */,
 				EB31099D22A7FF24005FCFBF /* Utilizador+CoreDataProperties.swift */,
 			);
@@ -146,6 +169,7 @@
 				EF369EE3229EDF1300B6E21A /* Products */,
 				EB4B99A34BB8EF825E9CDF6F /* Pods */,
 				4734F9E76D832FD1D9B7F072 /* Frameworks */,
+				4B9F617C22B06AAD008098EF /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +197,7 @@
 				EF369F0D229F34E100B6E21A /* MainStoryboardControllers */,
 				EF369F00229F288500B6E21A /* PesquisarLocal */,
 				EF369F03229F310200B6E21A /* AdicionarLocal */,
+				4B0AE7CD22AEB260006A2B0C /* DetalhesLocal */,
 				EF369F07229F320F00B6E21A /* Favoritos */,
 				EF369F0A229F32B900B6E21A /* Historico */,
 				EF369F0E229F355300B6E21A /* Ranking */,
@@ -327,6 +352,7 @@
 			files = (
 				EF369EFF229F283400B6E21A /* PesquisarLocal.storyboard in Resources */,
 				EF369F05229F312B00B6E21A /* AdicionarLocal.storyboard in Resources */,
+				4B0AE7CF22AEB2B3006A2B0C /* DetalhesLocal.storyboard in Resources */,
 				EF369EF0229EDF1400B6E21A /* LaunchScreen.storyboard in Resources */,
 				EF369F13229F36A000B6E21A /* Conta.storyboard in Resources */,
 				EF369F10229F361500B6E21A /* Ranking.storyboard in Resources */,
@@ -389,11 +415,13 @@
 			files = (
 				EF369EFB229F1A3700B6E21A /* RoundView.swift in Sources */,
 				EB70ACD422AFFC01002675F0 /* GlobalVariables.swift in Sources */,
+				4B9F617E22B06B19008098EF /* EntityLocalDetalhes.swift in Sources */,
 				EB02070E22AF0E0F004AEBD6 /* Week.swift in Sources */,
 				EB31099622A7F58A005FCFBF /* Sportfinder.xcdatamodeld in Sources */,
 				EB58500C22A81810006A07B6 /* Reachability.swift in Sources */,
 				EB7CCF5E22A6D767005A703A /* MyTableViewCell.swift in Sources */,
 				EF281F1B22AEA6830034FB66 /* RoundButton.swift in Sources */,
+				4B0AE7D122AEB411006A2B0C /* DetalhesLocalViewController.swift in Sources */,
 				EF369F02229F28AB00B6E21A /* SelecionarDesportoViewController.swift in Sources */,
 				EF281F1722AE8C020034FB66 /* FavoritosTableViewController.swift in Sources */,
 				EB31099E22A7FF24005FCFBF /* Utilizador+CoreDataClass.swift in Sources */,

@@ -1,4 +1,3 @@
-//
 //  Local.swift
 //  Sportfinder
 //
@@ -15,4 +14,5 @@ class EntityLocal {
     var foto = UIImage(contentsOfFile: "nopicture")
     var mediaLocal = ""
     var foto_url = ""
+
 }
