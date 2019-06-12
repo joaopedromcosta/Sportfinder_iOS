@@ -19,6 +19,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         emailTxt.delegate = self
         if((Auth.auth().currentUser) != nil){
             print("COM LOGIN FEITO")
+            GlobalVariables.loggedUserId = UserDefaults.standard.value(forKey: "userID") as! String
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "menuPrincipal", sender: self)
             }
