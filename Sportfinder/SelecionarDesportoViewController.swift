@@ -42,9 +42,9 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         }*/
         print(arrayDesportos.count)
         
-        self.tvDesportos.backgroundColor = UIColor(red:234/255.0, green:234/255.0, blue:234/255.0, alpha: 1)
+        //self.tvDesportos.backgroundColor = UIColor(red:234/255.0, green:234/255.0, blue:234/255.0, alpha: 1)
         
-        self.tvDesportos.rowHeight = 70.0
+        self.tvDesportos.rowHeight = 100.0
     
     }
     
@@ -91,15 +91,11 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         return cell*/
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellDesporto", for: indexPath) as! TableViewCellDesportos
-        let ec:EntityReturnDesportos = arrayDesportos[indexPath.row] as! EntityReturnDesportos
+        let ec:EntityReturnDesportos = arrayDesportos[indexPath.row]
         
         cell.tvNomeDesporto.text = ec.nome
         cell.IVIconDesporto.image = UIImage(named: "football_ball")
-        cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.borderWidth = 0.1
-        cell.layer.cornerRadius = 30
-        cell.clipsToBounds = true
-        
+        /*
         for c in arraYDesportosSelected {
             print("pedrosec" + c)
         }
@@ -110,28 +106,28 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         }else {
             for d in arraYDesportosSelected {
                 if ( ec.nome == d ) {
-                    cell.backgroundColor = UIColor(red:185/255.0, green:253/255.0, blue:216/255.0, alpha: 0.5)
+                    //cell.backgroundColor = UIColor(red:185/255.0, green:253/255.0, blue:216/255.0, alpha: 0.5)
                 }else {
-                    cell.backgroundColor = UIColor.white
+                    //cell.backgroundColor = UIColor.white
                 }
             }
         }
-        
+        */
         return cell
     }
     
-    
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    }
-  
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
+    /*func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+  
+    
+    
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 20
-    }
+    }*/
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
        /* UITableViewCell *cell = (UITableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
@@ -161,10 +157,10 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
             
             if (find) {
                 arraYDesportosSelected.remove(at: auxCount)
-                cell?.backgroundColor = UIColor.white
+                //cell?.backgroundColor = UIColor.white
             } else {
                 arraYDesportosSelected.append(nomeDesporto)
-                cell?.backgroundColor = UIColor(red:185/255.0, green:253/255.0, blue:216/255.0, alpha: 0.5)
+                //cell?.backgroundColor = UIColor(red:185/255.0, green:253/255.0, blue:216/255.0, alpha: 0.5)
             }
         }
         

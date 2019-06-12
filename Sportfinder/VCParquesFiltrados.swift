@@ -97,7 +97,7 @@ class VCParquesFiltrados: UIViewController, UITableViewDelegate, UITableViewData
         cell.lblDistancia.text = String(Int(ec.distancia))+" m"
         let url = URL(string: "https://sportfinderapi.000webhostapp.com/img/compressed/" + ec.urlfotolocal + ".png")
         let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-        cell.IVFotoLocal.image = UIImage(data: data!)
+        //cell.IVFotoLocal.image = UIImage(data: data!)
         
         return cell
     }

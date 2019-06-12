@@ -26,7 +26,6 @@ class TableViewCellLocais: UITableViewCell{
     }
     
     @IBOutlet weak var IVFotoLocal: UIImageView!
-    
     @IBOutlet weak var lblNomeLocal: UILabel!
     @IBOutlet weak var lblAvaliacao: UILabel!
     @IBOutlet weak var lblDistancia: UILabel!
