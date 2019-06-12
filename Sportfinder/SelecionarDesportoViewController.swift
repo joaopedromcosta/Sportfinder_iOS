@@ -19,7 +19,16 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
     
     @IBAction func btnPesquisar(_ sender: Any) {
         desportosSelectNomeToId()
-        //self.performSegue(withIdentifier: "listarPorDesporto", sender: self.arrayDesportosId)
+    
+        if(!self.hasConnectivity()){
+             showAlert(title: "Sem internet", message: "Por favor ligue-se à internet")
+            return
+        } else if(arraYDesportosSelected.count < 1){
+            showAlert(title: "Selecionar Desporto", message: "Tem de selecionar pelo menos um desporto!")
+            return
+        }
+       
+        
     }
     
     
@@ -217,6 +226,27 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         if(segue.identifier == "listarPorDesporto"){
             let vcParquesFiltrados = (segue.destination as! VCParquesFiltrados)
             vcParquesFiltrados.arrayIdDesporto = self.arrayDesportosId
+        }
+    }
+
+    func showAlert(title:String, message:String){
+        // create the alert
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func hasConnectivity() -> Bool {
+        if Reachability.isConnectedToNetwork(){
+            print("Internet Connection Available!")
+            return true
+        }else{
+            print("Internet Connection not Available!")
+            return false
         }
     }
     
