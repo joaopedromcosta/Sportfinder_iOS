@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtp-sL-C9r">
-                                <rect key="frame" x="83" y="303" width="209" height="61"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtp-sL-C9r">
+                                <rect key="frame" x="130.5" y="318.5" width="114" height="30"/>
                                 <state key="normal" title="Terminar Sessao"/>
                                 <connections>
                                     <action selector="btnLogout:" destination="tZV-cM-cJf" eventType="touchUpInside" id="D28-ZC-ReE"/>
@@ -29,8 +29,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qtp-sL-C9r" firstAttribute="centerX" secondItem="iTA-a7-mJi" secondAttribute="centerX" id="EPz-n8-F2B"/>
-                            <constraint firstItem="qtp-sL-C9r" firstAttribute="leading" secondItem="fzb-5O-LxM" secondAttribute="leading" constant="164" id="mXg-GA-Tiy"/>
-                            <constraint firstItem="qtp-sL-C9r" firstAttribute="top" secondItem="fzb-5O-LxM" secondAttribute="top" constant="298" id="tG9-PY-rUI"/>
                             <constraint firstItem="qtp-sL-C9r" firstAttribute="centerY" secondItem="iTA-a7-mJi" secondAttribute="centerY" id="yN4-NE-Ka3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fzb-5O-LxM"/>
