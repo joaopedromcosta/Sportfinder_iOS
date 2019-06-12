@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1E05940422A0448F00ACAD9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E05940322A0448F00ACAD9E /* GoogleService-Info.plist */; };
+		1E06000122B0164F002A19EF /* JsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06000022B0164F002A19EF /* JsonData.swift */; };
 		1E0777F422A8363D005ED261 /* TableViewCellDesportos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0777F322A8363D005ED261 /* TableViewCellDesportos.swift */; };
+		1E0A8EDA22AEEEB6004B8B9A /* VCParquesFiltrados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0A8ED922AEEEB6004B8B9A /* VCParquesFiltrados.swift */; };
 		1E15FE9B22A70EE400101A9E /* EntityReturnDesportos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E15FE9A22A70EE400101A9E /* EntityReturnDesportos.swift */; };
+		1E2348E322B05823005DED42 /* EntityReturnDataLocais.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2348E222B05823005DED42 /* EntityReturnDataLocais.swift */; };
+		1E2348E522B05917005DED42 /* TableViewCellLocais.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2348E422B05917005DED42 /* TableViewCellLocais.swift */; };
 		C51E5F2FE0B10AB58F1BE249 /* Pods_Sportfinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681AA3C85510C95F609FE8B6 /* Pods_Sportfinder.framework */; };
 		EB02070E22AF0E0F004AEBD6 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB02070D22AF0E0F004AEBD6 /* Week.swift */; };
 		EB2F4AB322B01B3200A860AD /* ContaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F4AB222B01B3200A860AD /* ContaController.swift */; };
@@ -48,8 +52,12 @@
 
 /* Begin PBXFileReference section */
 		1E05940322A0448F00ACAD9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1E06000022B0164F002A19EF /* JsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
 		1E0777F322A8363D005ED261 /* TableViewCellDesportos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellDesportos.swift; sourceTree = "<group>"; };
+		1E0A8ED922AEEEB6004B8B9A /* VCParquesFiltrados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCParquesFiltrados.swift; sourceTree = "<group>"; };
 		1E15FE9A22A70EE400101A9E /* EntityReturnDesportos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityReturnDesportos.swift; sourceTree = "<group>"; };
+		1E2348E222B05823005DED42 /* EntityReturnDataLocais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityReturnDataLocais.swift; sourceTree = "<group>"; };
+		1E2348E422B05917005DED42 /* TableViewCellLocais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellLocais.swift; sourceTree = "<group>"; };
 		2FB903156D2A27674691B110 /* Pods-Sportfinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sportfinder.release.xcconfig"; path = "Target Support Files/Pods-Sportfinder/Pods-Sportfinder.release.xcconfig"; sourceTree = "<group>"; };
 		681AA3C85510C95F609FE8B6 /* Pods_Sportfinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sportfinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB02070D22AF0E0F004AEBD6 /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
@@ -67,8 +75,8 @@
 		EF281F1622AE8C020034FB66 /* FavoritosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosTableViewController.swift; sourceTree = "<group>"; };
 		EF281F1822AE911F0034FB66 /* EntityLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityLocal.swift; sourceTree = "<group>"; };
 		EF281F1A22AEA6830034FB66 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
-		EF281F2A22B003810034FB66 /* FavoritosCell+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FavoritosCell+CoreDataProperties.swift"; path = "/Users/joaocosta/Documents/iOS Projects/Sportfinder/Sportfinder/FavoritosCell+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		EF281F2B22B003820034FB66 /* FavoritosCell+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FavoritosCell+CoreDataClass.swift"; path = "/Users/joaocosta/Documents/iOS Projects/Sportfinder/Sportfinder/FavoritosCell+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		EF281F2A22B003810034FB66 /* FavoritosCell+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FavoritosCell+CoreDataProperties.swift"; path = "Sportfinder/FavoritosCell+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		EF281F2B22B003820034FB66 /* FavoritosCell+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FavoritosCell+CoreDataClass.swift"; path = "Sportfinder/FavoritosCell+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		EF281F2E22B02CAE0034FB66 /* EntityLocalJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityLocalJSON.swift; sourceTree = "<group>"; };
 		EF369EE2229EDF1300B6E21A /* Sportfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sportfinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF369EE5229EDF1300B6E21A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +198,10 @@
 				EF369F01229F28AB00B6E21A /* SelecionarDesportoViewController.swift */,
 				1E15FE9A22A70EE400101A9E /* EntityReturnDesportos.swift */,
 				1E0777F322A8363D005ED261 /* TableViewCellDesportos.swift */,
+				1E0A8ED922AEEEB6004B8B9A /* VCParquesFiltrados.swift */,
+				1E06000022B0164F002A19EF /* JsonData.swift */,
+				1E2348E222B05823005DED42 /* EntityReturnDataLocais.swift */,
+				1E2348E422B05917005DED42 /* TableViewCellLocais.swift */,
 			);
 			name = PesquisarLocal;
 			sourceTree = "<group>";
@@ -398,6 +410,12 @@
 				EFD4847722AAC200008752BF /* RoundImage.swift in Sources */,
 				EB31099F22A7FF24005FCFBF /* Utilizador+CoreDataProperties.swift in Sources */,
 				EF281F2D22B003820034FB66 /* FavoritosCell+CoreDataClass.swift in Sources */,
+				1E06000122B0164F002A19EF /* JsonData.swift in Sources */,
+				1E0777F422A8363D005ED261 /* TableViewCellDesportos.swift in Sources */,
+				1E2348E322B05823005DED42 /* EntityReturnDataLocais.swift in Sources */,
+				EF369EE6229EDF1300B6E21A /* AppDelegate.swift in Sources */,
+				1E0A8EDA22AEEEB6004B8B9A /* VCParquesFiltrados.swift in Sources */,
+				1E2348E522B05917005DED42 /* TableViewCellLocais.swift in Sources */,
 				1E15FE9B22A70EE400101A9E /* EntityReturnDesportos.swift in Sources */,
 				EF369EFD229F1EEB00B6E21A /* MenuViewController.swift in Sources */,
 				EB7CCF5A22A6D0FD005A703A /* User.swift in Sources */,
@@ -547,8 +565,9 @@
 			baseConfigurationReference = F320DB29CF4022CA45CF2150 /* Pods-Sportfinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 934F7L3HCM;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Sportfinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -556,6 +575,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ipvc.estg.Sportfinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -566,8 +586,9 @@
 			baseConfigurationReference = 2FB903156D2A27674691B110 /* Pods-Sportfinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 934F7L3HCM;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Sportfinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -575,6 +596,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ipvc.estg.Sportfinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
