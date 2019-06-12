@@ -14,7 +14,11 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
         if(selecionou){
             arraYDesportosSelected.append(nomeDesporto)
         } else {
-            
+            print(arraYDesportosSelected)
+            var index = arraYDesportosSelected.firstIndex(of: nomeDesporto)
+            print("pedroindex: " + String(index!))
+            arraYDesportosSelected.remove(at: index!)
+            print(arraYDesportosSelected)
         }
         
     }
