@@ -50,6 +50,7 @@
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstItem="z3M-CE-lpV" firstAttribute="centerY" secondItem="Zcz-W3-Zhv" secondAttribute="centerY" id="0Km-2t-vk0"/>
                                                         <constraint firstAttribute="trailing" secondItem="g2s-Tb-hy5" secondAttribute="trailing" constant="20" id="3Vn-ry-WRW"/>
@@ -77,6 +78,7 @@
                                         <connections>
                                             <outlet property="IVIconDesporto" destination="z3M-CE-lpV" id="1zS-L2-jKF"/>
                                             <outlet property="tvNomeDesporto" destination="g2s-Tb-hy5" id="7h7-85-SFF"/>
+                                            <outlet property="vw" destination="Zcz-W3-Zhv" id="Wee-LH-zQY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -104,7 +106,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.54192285299999998" green="1" blue="0.66290719239999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6ef-uw-aEb" firstAttribute="top" secondItem="Po0-Q8-3LD" secondAttribute="bottom" constant="20" id="39n-2L-ykR"/>
                             <constraint firstItem="6ef-uw-aEb" firstAttribute="leading" secondItem="WUJ-lw-5Zv" secondAttribute="leading" constant="40" id="5AQ-vx-TvI"/>
@@ -136,6 +138,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gfo-0T-0M9">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellLocal" rowHeight="160" id="rZr-Qm-LHF" customClass="TableViewCellLocais" customModule="Sportfinder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="160"/>
@@ -198,13 +201,13 @@
                                                 <constraint firstAttribute="trailing" secondItem="Mdb-0Q-isP" secondAttribute="trailing" constant="20" id="lgE-Sp-j1G"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="Mdb-0Q-isP" firstAttribute="centerY" secondItem="rZr-Qm-LHF" secondAttribute="centerY" id="5Ko-eW-fIS"/>
                                             <constraint firstItem="Wmf-fQ-bnR" firstAttribute="centerY" secondItem="rZr-Qm-LHF" secondAttribute="centerY" id="L5j-ZZ-U37"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="IVFotoLocal" destination="Wmf-fQ-bnR" id="X8W-85-bBV"/>
+                                            <outlet property="IVFotoLocal" destination="Wmf-fQ-bnR" id="I8R-2l-76p"/>
                                             <outlet property="lblAvaliacao" destination="ZZ8-el-YRx" id="M72-Bg-9hB"/>
                                             <outlet property="lblDistancia" destination="wT4-S3-2Gg" id="8nb-Vo-1Ye"/>
                                             <outlet property="lblNomeLocal" destination="0LW-7P-5BB" id="BPe-tX-cZz"/>
