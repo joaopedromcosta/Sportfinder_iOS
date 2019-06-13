@@ -21,11 +21,24 @@ class DetalhesLocalViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     // MARK: Buttons
     @IBAction func butAdicionarFav(_ sender: Any) {
-        //self.lblNomeParque.text = self.detLocal.nome
-        //let url = "https://sportfinderapi.000webhostapp.com/img/" + self.detLocal.url_foto_local + ".png"
-        //print(url)
-        //let urlP = URL(string: url)!
-        //self.setImage(from: urlP)
+        var request = URLRequest(url: URL(string: "https://sportfinderapi.000webhostapp.com/slim/api/adicionarlocalfavorito")!)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        do{
+            let dados = JSONDataLocalidade(localidade_id: self.detLocal.id, utilizador_id: GlobalVariables.loggedUserId)
+            let jsonBody = try JSONEncoder().encode(dados)
+            request.httpBody = jsonBody
+            print("JSON body: ", String(bytes: jsonBody, encoding: .utf8)!)
+        }catch {
+            print("Erro na preparação dos dados")
+        }
+        URLSession.shared.dataTask(with: request) { (data, response, err) in
+            
+            //Check for errors
+            if(err != nil){
+                print("Error in request: \(String(describing: err))")
+            }
+        }.resume()
     }
     
     override func viewDidLoad() {
@@ -108,4 +121,8 @@ class DetalhesLocalViewController: UIViewController {
     }
     */
 
+}
+struct JSONDataLocalidade: Codable {    
+    var localidade_id: String?
+    var utilizador_id: String?
 }
