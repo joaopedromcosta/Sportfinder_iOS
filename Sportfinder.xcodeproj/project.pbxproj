@@ -165,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				1E05940322A0448F00ACAD9E /* GoogleService-Info.plist */,
+				EF369EF9229F1A1500B6E21A /* CustomClass */,
 				EF369EE4229EDF1300B6E21A /* Sportfinder */,
 				EF369EE3229EDF1300B6E21A /* Products */,
 				EB4B99A34BB8EF825E9CDF6F /* Pods */,
@@ -184,7 +185,6 @@
 		EF369EE4229EDF1300B6E21A /* Sportfinder */ = {
 			isa = PBXGroup;
 			children = (
-				EF369EF9229F1A1500B6E21A /* CustomClass */,
 				EB31099B22A7F756005FCFBF /* CoreDataUser */,
 				EF369EE5229EDF1300B6E21A /* AppDelegate.swift */,
 				EF369EE9229EDF1300B6E21A /* Main.storyboard */,
