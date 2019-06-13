@@ -78,6 +78,7 @@
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <gestureRecognizers/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="140" id="0jD-dc-Qdo"/>
                                                 <constraint firstItem="hek-he-kpx" firstAttribute="top" secondItem="b2Y-tM-tY6" secondAttribute="bottom" constant="10" id="3j7-4z-xpz"/>
@@ -112,6 +113,7 @@
                                     <outlet property="classificacaoMediaLbl" destination="7Pi-jM-eXK" id="jUT-ff-sjk"/>
                                     <outlet property="imagemLocal" destination="Pc3-CR-Fo8" id="3t0-rp-pVz"/>
                                     <outlet property="localNomeLbl" destination="b2Y-tM-tY6" id="IDE-Y9-Bxf"/>
+                                    <outlet property="roundView" destination="iPL-PY-Ack" id="7lD-Ze-1no"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -134,11 +136,20 @@
                     </refreshControl>
                     <connections>
                         <outlet property="tableViewReference" destination="3i0-7q-lfb" id="vgA-je-0iR"/>
+                        <segue destination="pyl-zy-eMC" kind="show" identifier="goToDetalheFromFavoritos" id="I7p-EY-cz3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tni-LA-w0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-12" y="54.422788605697157"/>
+        </scene>
+        <!--DetalhesLocalView-->
+        <scene sceneID="SR0-SW-AgS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetalhesLocal" referencedIdentifier="DetalhesLocalView" id="pyl-zy-eMC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jgy-fQ-Nid" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="32"/>
         </scene>
     </scenes>
     <resources>

@@ -203,6 +203,7 @@ class SelecionarDesportoViewController: UIViewController, UITableViewDataSource,
     }
     
     func desportosSelectNomeToId(){
+        arrayDesportosId.removeAll()
         for desp in arraYDesportosSelected {
             for d in arrayDesportos {
                 if(desp == d.nome) {

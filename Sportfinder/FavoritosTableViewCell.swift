@@ -10,6 +10,7 @@ import UIKit
 
 protocol FavoritosTableViewCellDelegate {
     func didClickRemoveFavorito(id_local:String, nome_local:String)
+    func didClickGoToDetalhes(id_local:String)
 }
 
 class FavoritosTableViewCell: UITableViewCell {
@@ -18,6 +19,7 @@ class FavoritosTableViewCell: UITableViewCell {
     @IBOutlet weak var imagemLocal: RoundImage!
     @IBOutlet weak var classificacaoMediaLbl: UILabel!
     //
+    @IBOutlet weak var roundView: RoundView!
     var local:EntityLocal!
     var delegate: FavoritosTableViewCellDelegate?
     //
@@ -25,6 +27,9 @@ class FavoritosTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(sender:)))
+        tap.delegate = self
+        roundView.addGestureRecognizer(tap)
     }
     //
     func setLocal(local:EntityLocal){
@@ -39,8 +44,14 @@ class FavoritosTableViewCell: UITableViewCell {
         self.classificacaoMediaLbl.text = local.mediaLocal
     }
     
+    @objc func handleTap(sender: UITapGestureRecognizer? = nil){
+        print("costa estou aqui \(self.local.id_local)")
+        delegate?.didClickGoToDetalhes(id_local: self.local.id_local)
+    }
+    
     @IBAction func favoritoBtnClicked(_ sender: Any) {
         delegate?.didClickRemoveFavorito(id_local: self.local.id_local, nome_local:self.local.nome)
     }
+    
     
 }

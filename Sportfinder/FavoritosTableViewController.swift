@@ -21,6 +21,7 @@ class FavoritosTableViewController: UITableViewController, UISearchBarDelegate{
     //
     var searchTerms = ""
     var searchWasCancelled = false
+    var id_localDetalhes = ""
     //
     @IBOutlet var tableViewReference: UITableView!
     //
@@ -34,6 +35,8 @@ class FavoritosTableViewController: UITableViewController, UISearchBarDelegate{
         self.tableViewReference.refreshControl?.addTarget(self, action: #selector(FavoritosTableViewController.refreshUsers), for: UIControl.Event.valueChanged)
         //
         loadLocaisFromCoreData()
+        //
+        
     }
     //
     @objc func refreshUsers(){
@@ -52,6 +55,24 @@ class FavoritosTableViewController: UITableViewController, UISearchBarDelegate{
     }
 }
 extension FavoritosTableViewController: FavoritosTableViewCellDelegate{
+    func didClickGoToDetalhes(id_local: String) {
+        if !hasConnectivity(){
+            let alert = UIAlertController(title: "Sem Conexão Internet", message: "Conecte-se à internet para ver mais detalhes", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Fechar", style: .default, handler: nil))
+            present(alert,animated: true)
+        }else{
+            print("ID a mostrar: \(id_local)")
+            id_localDetalhes = id_local
+            performSegue(withIdentifier: "goToDetalheFromFavoritos", sender: self)
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "goToDetalheFromFavoritos"){
+            let vcDetalhes = (segue.destination as! DetalhesLocalViewController)
+            vcDetalhes.idRecebido  = id_localDetalhes
+            
+        }
+    }
     func didClickRemoveFavorito(id_local: String, nome_local:String) {
         if !hasConnectivity() {
             let alert = UIAlertController(title: "Sem Conexão Internet", message: "Conecte-se à internet para remover o favorito", preferredStyle: .alert)
