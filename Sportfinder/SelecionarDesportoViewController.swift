@@ -10,6 +10,7 @@
 import UIKit
 
 class SelecionarDesportoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate, CellDesportoDelegate{
+    
     func didClickInDesportoCell(nomeDesporto: String, selecionou: Bool) {
         if(selecionou){
             arraYDesportosSelected.append(nomeDesporto)

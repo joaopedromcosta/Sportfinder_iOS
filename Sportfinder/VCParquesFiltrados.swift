@@ -45,6 +45,8 @@ class VCParquesFiltrados: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func getLocais(){
+        self.arrayDataLocais.removeAll()
+        self.filteredArrayLocais.removeAll()
         var request = URLRequest(url: URL(string: "https://sportfinderapi.000webhostapp.com/slim/api/getlocais2")!)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
