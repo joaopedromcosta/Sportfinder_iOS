@@ -26,7 +26,7 @@ class FavoritosTableViewController: UITableViewController, UISearchBarDelegate{
     //
     override func viewDidLoad() {
         super.viewDidLoad()
-        delegate = UIApplication.shared.delegate as! AppDelegate
+        delegate = (UIApplication.shared.delegate as! AppDelegate)
         //
         userID = GlobalVariables.loggedUserId
         print("User ID: \(userID)")
