@@ -18,7 +18,7 @@ class VCParquesFiltrados: UIViewController, UITableViewDelegate, UITableViewData
     var arrayIdDesporto:[String] =  [""]
     var arrayIdAux = [Sport]()
     
-    var idLocalSelecionado = ""
+    var idLocalSelecionado = "29"
     
     @IBOutlet var tvLocais: UITableView!
     
@@ -105,6 +105,13 @@ class VCParquesFiltrados: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        print("id: " + arrayDataLocais[indexPath.row].nome)
+        self.idLocalSelecionado = arrayDataLocais[indexPath.row].id
+        print(self.idLocalSelecionado+" -± welelele")
+        return indexPath
+    }
+    
     //searchbar
     override func viewWillAppear(_ animated: Bool) {
         let searchController = UISearchController(searchResultsController: nil)
@@ -116,11 +123,13 @@ class VCParquesFiltrados: UIViewController, UITableViewDelegate, UITableViewData
         searchController.searchBar.delegate = self
         
     }
-    
+    /*
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("id: " + arrayDataLocais[indexPath.row].nome)
-        idLocalSelecionado = arrayDataLocais[indexPath.row].id
-    }
+        self.idLocalSelecionado = arrayDataLocais[indexPath.row].id
+        print(self.idLocalSelecionado+" -± welelele")
+        //performSegue(withIdentifier: "OpenDetalhesLocal", sender: nil)
+    }*/
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filtrarTableLocais(searchText: searchText)
@@ -140,7 +149,23 @@ class VCParquesFiltrados: UIViewController, UITableViewDelegate, UITableViewData
         tvLocais.reloadData()
     }
     
-    
+
+   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "OpenDetalhesLocal"){
+            let vcDetalhes = (segue.destination as! DetalhesLocalViewController)
+            print(self.idLocalSelecionado + "prepares4segue")
+            vcDetalhes.idRecebido  = self.idLocalSelecionado
+            
+        }
+    }
+    /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "listarPorDesporto"){
+            let vcParquesFiltrados = (segue.destination as! VCParquesFiltrados)
+            vcParquesFiltrados.arrayIdDesporto = self.arrayDesportosId
+        }
+    }*/
     
     
 }

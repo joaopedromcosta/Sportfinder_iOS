@@ -11,7 +11,16 @@ import UIKit
 
 class SelecionarDesportoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate, CellDesportoDelegate{
     func didClickInDesportoCell(nomeDesporto: String, selecionou: Bool) {
-        arraYDesportosSelected.append(nomeDesporto)
+        if(selecionou){
+            arraYDesportosSelected.append(nomeDesporto)
+        } else {
+            print(arraYDesportosSelected)
+            var index = arraYDesportosSelected.firstIndex(of: nomeDesporto)
+            print("pedroindex: " + String(index!))
+            arraYDesportosSelected.remove(at: index!)
+            print(arraYDesportosSelected)
+        }
+        
     }
     
     

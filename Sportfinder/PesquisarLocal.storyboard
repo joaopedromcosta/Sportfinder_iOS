@@ -223,6 +223,7 @@
                                             <outlet property="lblAvaliacao" destination="ZZ8-el-YRx" id="M72-Bg-9hB"/>
                                             <outlet property="lblDistancia" destination="wT4-S3-2Gg" id="8nb-Vo-1Ye"/>
                                             <outlet property="lblNomeLocal" destination="0LW-7P-5BB" id="BPe-tX-cZz"/>
+                                            <segue destination="J8A-RF-moz" kind="show" identifier="OpenDetalhesLocal" id="C04-EB-fBd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -249,6 +250,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Si-iH-qYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2048.8000000000002" y="166.8665667166417"/>
+        </scene>
+        <!--DetalhesLocalView-->
+        <scene sceneID="oy9-Ro-9MD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetalhesLocal" referencedIdentifier="DetalhesLocalView" id="J8A-RF-moz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z5T-Bk-krG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2759" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="75Q-51-sG1">
